@@ -1,0 +1,26 @@
+- Omar Cornut (Default, Classic)
+  https://github.com/ocornut
+- Simon Geilfus (Cinder)
+  https://github.com/simongeilfus/Cinder-ImGui
+- Adobe (Spectrum)
+  https://github.com/adobe/imgui/blob/master/imgui_spectrum.h
+- Chris (EnemyMouse)
+  https://gist.github.com/enemymouse
+- Ole Kristensen (ledSynthMaster)
+  https://github.com/olekristensen/ledsynthmaster
+- CookiePLMonster (Gold)
+  https://github.com/CookiePLMonster
+- Aiekick (Green)
+  https://github.com/aiekick
+- ImJC1C (Material)
+  https://github.com/ImJC1C
+- rewrking (FutureDark)
+  https://github.com/rewrking
+- username..was..ken (Microsoft)
+  https://github.com/usernameiwantedwasalreadytaken
+- Madam Herta (Moonlight)
+  https://github.com/Madam-Herta/
+- Derrick Canfield (Photoshop)
+  https://github.com/derydoca
+- Lunar (Purple Comfy)
+  https://github.com/RegularLunar
