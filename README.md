@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/a3bd806e-76a1-479c-b28f-2c72a152c952" width="176"><br>
   <b>ImMobile Shell</b><br>
   <a href="https://github.com/basharast/ImMobile/wiki/Privacy">Privacy</a> |
-  <a href="https://github.com/basharast/ImMobile/wiki/Usage">Wiki</a> |
+  <a href="https://github.com/basharast/ImMobile/wiki">Wiki</a> |
   <a href="https://github.com/basharast/ImMobile/wiki/ImLab">Development</a> 
   <br><br>
 </p>
