@@ -12,7 +12,9 @@
 
 ImMobile, a shell representing a truly universal environment designed to operate on the first Windows build and deliver a desktop-like experience.
 
-This project is built upon **ImGui** and **C++**, focusing on performance and flexibility. ImGui showcases its robust and smooth architecture with a simple statement:
+This project is built upon **ImGui** and **C++**, focusing on performance and flexibility. ImGui showcases its robust and smooth architecture with a simple statement: 
+
+> I barely understand 5% of DirectX or drawing pipelines, but with ImGui this project was possible
 
 ## What Does ImMobile Offer?
 
