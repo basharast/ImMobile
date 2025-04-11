@@ -3,7 +3,7 @@
   <b>ImMobile Shell</b><br>
   <a href="https://github.com/basharast/ImMobile/wiki/Privacy">Privacy</a> |
   <a href="https://github.com/basharast/ImMobile/wiki">Wiki</a> |
-  <a href="https://github.com/basharast/ImMobile/ImLab">Lab</a> |
+  <a href="https://github.com/basharast/ImMobile/wiki/ImLab">Lab</a> |
   <a href="https://github.com/basharast/ImMobile/releases/latest">Releases</a> 
   <br><br>
 </p>
