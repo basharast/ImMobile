@@ -6,7 +6,7 @@ also I will upload later more useful stuff once I have time.
 
 ## Guide
 
-Refer to Wiki page for more descriptions and examples
+Refer to [Wiki page](https://github.com/basharast/ImMobile/wiki/ImLab) for more descriptions and examples
 
 ## Build
 
