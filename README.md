@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a3bd806e-76a1-479c-b28f-2c72a152c952" width="176"><br>
+  <img src="assets/logo.png" width="176"><br>
   <b>ImMobile Shell</b><br>
   <a href="https://github.com/basharast/ImMobile/wiki/Privacy">Privacy</a> |
   <a href="https://github.com/basharast/ImMobile/wiki">Wiki</a> |
