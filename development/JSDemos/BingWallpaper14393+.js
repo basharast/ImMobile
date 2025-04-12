@@ -2,6 +2,7 @@
 // https://github.com/basharast/ImMobile/wiki/DevJSRuntime
 
 // BingWallpapers script by Bashar Astifan
+// Doing the same in Extension is far less efforts than below
 
 imm.resetRuntime(); // Ensure a clean runtime at start
 
@@ -67,7 +68,7 @@ function getFileName(fileURL) {
 	return fileName;
 }
 
-// 🌌 Main logic: Fetch, download, and set Bing wallpaper
+// Main logic: Fetch, download, and set Bing wallpaper
 async function FetchBingWallpaper() {
 	if (!imm.isOnline()) return;
 
@@ -129,7 +130,7 @@ async function FetchBingWallpaper() {
 			console.error("Failed to download the image");
 		}
 	} else {
-		console.warn(`📎 Wallpaper already exists and set: ${imageFilename}`);
+		console.warn(`Wallpaper already exists and set: ${imageFilename}`);
 	}
 
 	// Delay + Notify

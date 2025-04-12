@@ -2,24 +2,9 @@
 // https://github.com/basharast/ImMobile/wiki/DevJSRuntime
 
 // BingWallpapers script by Bashar Astifan
+// Doing the same in Extension is far less efforts than below
 
 imm.resetRuntime(); // Ensure a clean runtime at start
-
-// Utility: Check if a file exists at the given path
-function isFileExists(filePath) {
-	let handle = null;
-	try {
-		handle = imm.os.open(filePath, imm.os.O_RDONLY);
-		console.log(`File handle: ${handle}`);
-	} catch (e) {
-		console.error("File check error:", e);
-	}
-
-	if (handle < 0) return false;
-
-	imm.os.close(handle);
-	return true;
-}
 
 // Utility: Copy file using raw ArrayBuffer
 function copyFile(sourcePath, destinationPath) {
@@ -67,7 +52,7 @@ function getFileName(fileURL) {
 	return fileName;
 }
 
-// 🌌 Main logic: Fetch, download, and set Bing wallpaper
+// Main logic: Fetch, download, and set Bing wallpaper
 async function FetchBingWallpaper() {
 	if (!imm.isOnline()) return;
 
@@ -96,41 +81,14 @@ async function FetchBingWallpaper() {
 		return;
 	}
 
-	// Ensure subfolder for landscape images
-	const folderLandscapePath = imm.createFolder(folderPath, "landscape");
 	const wallpaperPath = `${folderPath}\\${imageFilename}`;
-
 	console.success(`Wallpaper target path: ${wallpaperPath}`);
 
 	// Download and apply wallpaper if it doesn't exist
-	if (!isFileExists(wallpaperPath)) {
-		imm.quickDownload(wallpaperVertical, `${bingWallpapers}\\${imageFilename}`);
-		imm.quickDownload(wallpaperLandscape, `${bingWallpapers}\\landscape\\${imageFilename}`);
+	imm.quickDownload(wallpaperVertical, `${bingWallpapers}\\${imageFilename}`);
 
-		// After download, apply the wallpaper
-		if (isFileExists(wallpaperPath)) {
-			console.warn(`Applying background: ${imageFilename}`);
-			imm.changeBackground(wallpaperPath);
-
-			// Copy landscape version to backgrounds folder
-			try {
-				const wallpaperLandscapePath = `${folderLandscapePath}\\${imageFilename}`;
-				const backgroundsLandscapePath = imm.createFolder("$data", "backgrounds\\landscape");
-
-				if (backgroundsLandscapePath) {
-					const destImage = `${backgroundsLandscapePath}\\background.jpg`;
-					console.log(`Copying image to: ${destImage}`);
-					copyFile(wallpaperLandscapePath, destImage);
-				}
-			} catch (err) {
-				console.error("Copy error:", err.message);
-			}
-		} else {
-			console.error("Failed to download the image");
-		}
-	} else {
-		console.warn(`📎 Wallpaper already exists and set: ${imageFilename}`);
-	}
+	console.warn(`Applying background: ${imageFilename}`);
+	imm.changeBackground(wallpaperPath);
 
 	// Delay + Notify
 	await imm.sleepAsync(4000);
