@@ -100,8 +100,11 @@
       <AdditionalDependencies>WindowsApp.lib;$(ProjectDir)Libs\$(Platform)\ImMobile.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>if exist "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions" (
+    del "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions\$(TargetFileName)" &gt;nul 2&gt;&amp;1
+    xcopy "$(TargetPath)" "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions\" /Y /C /I
+    start "" "imm:"
+)</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>
@@ -125,8 +128,11 @@
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>if exist "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions" (
+    del "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions\$(TargetFileName)" &gt;nul 2&gt;&amp;1
+    xcopy "$(TargetPath)" "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions\" /Y /C /I
+    start "" "imm:"
+)</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>
@@ -173,8 +179,11 @@
       <AdditionalDependencies>WindowsApp.lib;$(ProjectDir)Libs\$(Platform)\ImMobile.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>if exist "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions" (
+    del "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions\$(TargetFileName)" &gt;nul 2&gt;&amp;1
+    xcopy "$(TargetPath)" "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions\" /Y /C /I
+    start "" "imm:"
+)</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>
@@ -195,8 +204,11 @@
       <AdditionalDependencies>WindowsApp.lib;$(ProjectDir)Libs\$(Platform)\ImMobile.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>if exist "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions" (
+    del "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions\$(TargetFileName)" &gt;nul 2&gt;&amp;1
+    xcopy "$(TargetPath)" "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions\" /Y /C /I
+    start "" "imm:"
+)</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>
