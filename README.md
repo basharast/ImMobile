@@ -146,7 +146,7 @@ I’ve done my best to ensure it works well with both **touch and mouse input**.
 
 ## Target Audience
 
-Currently, ImMobile is targeted at the **Windows Phone community**.  
+Currently, ImMobile is targeted at the **[Windows Phone community](https://t.me/WindowsPhoneCommunity)**.  
 While it could be adapted for other platforms, there is no clear motivation for doing so at this time.
 
 Additionally, due to a lack of testing hardware (such as Xbox or ARM64 Surface devices), supporting those platforms would be **very difficult** at the moment.
