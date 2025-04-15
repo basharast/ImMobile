@@ -33,6 +33,17 @@ then you need to adjust extra option to compile:
 - Code Generation
 - Set `Basic Runtime Checks` to `Default`
 
+## C++ Language Standard
+
+In some cases you may need to use the latest std version, it will not cause any issue
+
+as example in VS 2017:
+
+- Project Settings
+- C/C++ -> Language
+- At C++ Language Standard
+- Select `ISO C++ Latest Draft Standard..`
+
 ## Easy Testing
 
 The project has post command to copy the dll to extensions folder if ImMobile installed and it will run the app
