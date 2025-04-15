@@ -79,6 +79,8 @@ These tools enhance the feeling of a **standalone environment**, reducing interr
 **Extensions** are designed to expand the capabilities of ImMobile beyond its default functionality.  
 They can reduce development effort by **up to 50% or more**, and they run as part of the **ImMobile UI engine**.
 
+Check out [ImmExtension Examples](https://github.com/basharast/ImMobile/tree/main/development/ExtensionsExamples)
+
 
 ## JSRuntime
 
