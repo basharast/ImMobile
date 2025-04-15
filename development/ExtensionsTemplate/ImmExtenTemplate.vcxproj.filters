@@ -80,5 +80,6 @@
     <ClInclude Include="Extras\nlohmann_json.hpp">
       <Filter>Extras</Filter>
     </ClInclude>
+    <ClInclude Include="ImmApiProviderBridge.h" />
   </ItemGroup>
 </Project>

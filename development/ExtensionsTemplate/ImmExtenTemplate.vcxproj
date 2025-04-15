@@ -231,6 +231,7 @@
     <ClInclude Include="Helpers\StorageExtensions.h" />
     <ClInclude Include="Helpers\StorageInfo.h" />
     <ClInclude Include="Helpers\StoragePath.h" />
+    <ClInclude Include="ImmApiProviderBridge.h" />
     <ClInclude Include="ImmExtenTemplate.h" />
   </ItemGroup>
   <ItemGroup>
