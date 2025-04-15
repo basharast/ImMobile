@@ -45,6 +45,12 @@ Also check video below to explore the main UI
 [ImMobile UI Walkthrough (YouTube)](https://youtu.be/0ZooT_Rs-P0)
 
 ***
+<details>
+  <summary><strong>Flexible Extensions (Click Here)</strong></summary>
+  <br>
+<p><img src="https://github.com/user-attachments/assets/87905d3c-3044-41b0-a346-9f14bef59b42" width="650"/></p>
+  
+</details>
 
 <details>
   <summary><strong>Sorting Home Grid (Click Here)</strong></summary>
