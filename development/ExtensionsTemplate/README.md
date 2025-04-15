@@ -10,7 +10,7 @@ Ensure to rename the project other than the default template, the default templa
 
 As non-cpp expert, I may built this in odd way for cpp developers
 
-so you cannot include `ImmApiProvider.h` in you `.cpp` files directly
+so you cannot include `ImmApiProvider.h` in your `.cpp` files directly
 
 as solution I have provided some helpful APIs, storage and log ones specifically at `ImmApiProviderBridge.h`
 
