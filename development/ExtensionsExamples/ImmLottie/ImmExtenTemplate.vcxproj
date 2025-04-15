@@ -297,31 +297,6 @@
     <ClCompile Include="ImmLottie.cpp" />
     <ClCompile Include="Others\dllmain.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\samples\2023.json" />
-    <None Include="Resources\samples\angrycloud.json" />
-    <None Include="Resources\samples\car.json" />
-    <None Include="Resources\samples\confused.json" />
-    <None Include="Resources\samples\cubes.json" />
-    <None Include="Resources\samples\email.json" />
-    <None Include="Resources\samples\emojilove.json" />
-    <None Include="Resources\samples\explosion.json" />
-    <None Include="Resources\samples\flow.json" />
-    <None Include="Resources\samples\fly1.json" />
-    <None Include="Resources\samples\freeside.json" />
-    <None Include="Resources\samples\heart.json" />
-    <None Include="Resources\samples\jellyfish.json" />
-    <None Include="Resources\samples\loader.json" />
-    <None Include="Resources\samples\music.json" />
-    <None Include="Resources\samples\runcycle.json" />
-    <None Include="Resources\samples\seeu.json" />
-    <None Include="Resources\samples\smarthome.json" />
-    <None Include="Resources\samples\speaker.json" />
-    <None Include="Resources\samples\typing.json" />
-    <None Include="Resources\samples\updown.json" />
-    <None Include="Resources\samples\valentine.json" />
-    <None Include="Resources\samples\welcome.json" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

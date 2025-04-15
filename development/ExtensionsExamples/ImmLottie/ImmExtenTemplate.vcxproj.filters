@@ -34,12 +34,6 @@
     <Filter Include="Core\rapidjson\msinttypes">
       <UniqueIdentifier>{f4d3db96-6898-4228-ad7b-16ae91a4fb9c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resources">
-      <UniqueIdentifier>{9f31edb3-69a7-4bbc-afb1-f8a3e13fecb9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\samples">
-      <UniqueIdentifier>{cec4083f-feeb-4f83-940c-1c0030741f1d}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Others\dllmain.cpp">
@@ -245,76 +239,5 @@
     </ClInclude>
     <ClInclude Include="ImmLottie.h" />
     <ClInclude Include="ImmApiProviderBridge.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\samples\2023.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\angrycloud.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\car.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\confused.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\cubes.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\email.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\emojilove.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\explosion.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\flow.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\fly1.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\freeside.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\heart.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\jellyfish.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\loader.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\music.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\runcycle.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\seeu.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\smarthome.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\speaker.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\typing.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\updown.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\valentine.json">
-      <Filter>Resources\samples</Filter>
-    </None>
-    <None Include="Resources\samples\welcome.json">
-      <Filter>Resources\samples</Filter>
-    </None>
   </ItemGroup>
 </Project>
