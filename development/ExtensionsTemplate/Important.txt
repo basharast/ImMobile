@@ -1,2 +1,0 @@
-Better to keep optimization off
-The main project compiled with /MDd

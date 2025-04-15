@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{7d631577-2f98-4dad-a58a-81ca447fea5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{5b8d2ab3-c2c4-4e8d-acc2-1e7f1f368654}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Others">
+      <UniqueIdentifier>{15495947-241d-48af-beda-d674b6821970}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extras">
+      <UniqueIdentifier>{2c360152-d06e-41aa-a719-ab99bd9c3433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{0849ad18-189f-4f83-948e-7dc7fa4a2737}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{4ef72f4f-8f54-46c6-bd52-7a03c32ceea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\freetype">
+      <UniqueIdentifier>{513b7e9c-780f-4443-98b2-faf0a87618e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\rapidjson">
+      <UniqueIdentifier>{664c0c52-d58d-4dc9-9359-bef4c6292e0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\rapidjson\error">
+      <UniqueIdentifier>{bdc7f5a7-b1d5-45fb-a386-e99ba8708f1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\rapidjson\internal">
+      <UniqueIdentifier>{8999d06f-bce0-4a74-bb5a-2fed3ae117f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\rapidjson\msinttypes">
+      <UniqueIdentifier>{f4d3db96-6898-4228-ad7b-16ae91a4fb9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{9f31edb3-69a7-4bbc-afb1-f8a3e13fecb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\samples">
+      <UniqueIdentifier>{cec4083f-feeb-4f83-940c-1c0030741f1d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Others\dllmain.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\StorageExtensions.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\StoragePath.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\imottie_renderer.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\freetype\v_ft_math.cpp">
+      <Filter>Core\freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\freetype\v_ft_raster.cpp">
+      <Filter>Core\freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\freetype\v_ft_stroker.cpp">
+      <Filter>Core\freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="ImmLottie.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GUI\imgui.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\imgui_shared.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\imgui_internal.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\imstb_textedit.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\implot_internal.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\implot.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\IExtension.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImmApiProvider.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\pch.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\IconsFontAwesome5.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ggml.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\StorageExtensions.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\StorageInfo.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\StoragePath.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\nlohmann_json.hpp">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\stb_image.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\imlottie.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\imlottie_impl.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\freetype\v_ft_math.h">
+      <Filter>Core\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\freetype\v_ft_raster.h">
+      <Filter>Core\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\freetype\v_ft_stroker.h">
+      <Filter>Core\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\freetype\v_ft_types.h">
+      <Filter>Core\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\fwd.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\istreamwrapper.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\memorybuffer.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\memorystream.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\ostreamwrapper.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\pointer.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\prettywriter.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\rapidjson.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\reader.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\schema.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\stream.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\stringbuffer.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\writer.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\allocators.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\cursorstreamwrapper.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\document.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\encodedstream.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\encodings.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\filereadstream.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\filewritestream.h">
+      <Filter>Core\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\error\en.h">
+      <Filter>Core\rapidjson\error</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\error\error.h">
+      <Filter>Core\rapidjson\error</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\biginteger.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\clzll.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\diyfp.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\dtoa.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\ieee754.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\itoa.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\meta.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\pow10.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\regex.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\stack.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\strfunc.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\strtod.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\internal\swap.h">
+      <Filter>Core\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\msinttypes\inttypes.h">
+      <Filter>Core\rapidjson\msinttypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\rapidjson\msinttypes\stdint.h">
+      <Filter>Core\rapidjson\msinttypes</Filter>
+    </ClInclude>
+    <ClInclude Include="ImmLottie.h" />
+    <ClInclude Include="ImmApiProviderBridge.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\samples\2023.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\angrycloud.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\car.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\confused.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\cubes.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\email.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\emojilove.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\explosion.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\flow.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\fly1.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\freeside.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\heart.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\jellyfish.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\loader.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\music.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\runcycle.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\seeu.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\smarthome.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\speaker.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\typing.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\updown.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\valentine.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+    <None Include="Resources\samples\welcome.json">
+      <Filter>Resources\samples</Filter>
+    </None>
+  </ItemGroup>
+</Project>

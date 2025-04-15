@@ -16,9 +16,28 @@ as solution I have provided some helpful APIs, storage and log ones specifically
 
 you can include this file and access to the APIs, if you want more you can simply expose more.
 
+## Code Optimizaion
+For some cases better to keep the optimizition off
+
+however, no rule, you need to try, the main project compiled with /MDd
+
+if you want to enable optimizition from:
+
+- Project Settings
+- Optimizaion
+- Choose `/O2` (Favor Speed)
+
+then you need to adjust extra option to compile:
+
+- Project Settings 
+- Code Generation
+- Set `Basic Runtime Checks` to `Default`
+
 ## Easy Testing
 
 The project has post command to copy the dll to extensions folder if ImMobile installed and it will run the app
+
+the code below already added, you don't need to add it again
 
 ```batch
 if exist "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensions" (
