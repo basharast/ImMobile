@@ -12,7 +12,7 @@ Refer to the [Wiki page](https://github.com/basharast/ImMobile/wiki/DevExtension
 ## Remarks
 The only change I made is to use ImmApi provider to load the file instead of the fopen
 
-at `imottie_renderer.cpp`, [Line](https://github.com/basharast/ImMobile/blob/7de44d60a4673581d07947c76dcbeb6055982d00/development/ExtensionsExamples/ImmLottie/Core/imottie_renderer.cpp#L5939)
+at `imottie_renderer.cpp`, [Line](https://github.com/basharast/ImMobile/blob/21861844f4d4d87e1a4b00d9a0ba07655f60b2e6/development/ExtensionsExamples/ImmLottie/Core/imottie_renderer.cpp#L5939)
 
 ```cpp
 #include "ImmApiProviderBridge.h"
@@ -31,7 +31,7 @@ bool LottieLoader::load(const std::string &path, bool cachePolicy)
 
 also at the main extension code I ensured that all cleaned up for correct unload
 
-at `ImmLottie.cpp`, [Line](https://github.com/basharast/ImMobile/blob/7de44d60a4673581d07947c76dcbeb6055982d00/development/ExtensionsExamples/ImmLottie/ImmLottie.cpp#L281)
+at `ImmLottie.cpp`, [Line](https://github.com/basharast/ImMobile/blob/21861844f4d4d87e1a4b00d9a0ba07655f60b2e6/development/ExtensionsExamples/ImmLottie/ImmLottie.cpp#L356)
 
 ```cpp
 void Unloading() override {
