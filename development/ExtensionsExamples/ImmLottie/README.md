@@ -15,6 +15,7 @@ The only change I made is to use ImmApi provider to load the file instead of the
 at `imottie_renderer.cpp`, [Line](https://github.com/basharast/ImMobile/blob/7de44d60a4673581d07947c76dcbeb6055982d00/development/ExtensionsExamples/ImmLottie/Core/imottie_renderer.cpp#L5939)
 
 ```cpp
+#include "ImmApiProviderBridge.h"
 bool LottieLoader::load(const std::string &path, bool cachePolicy)
 {
   //...
