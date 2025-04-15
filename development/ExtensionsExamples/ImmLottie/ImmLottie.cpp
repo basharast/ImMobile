@@ -69,7 +69,7 @@ public:
 		flags = ImGuiWindowFlags_HorizontalScrollbar | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoCollapse;
 		flags |= ImGuiWindowFlags_SleepFPS;
 		flags |= ImGuiWindowFlags_30FPS;
-		//flags |= ImGuiWindowFlags_RenderAlways;
+		flags |= ImGuiWindowFlags_RenderAlways;
 		//flags |= ImGuiWindowFlags_TouchPad;
 		//flags |= ImGuiWindowFlags_RequireFull;
 		//flags |= ImGuiWindowFlags_NoTaskBar;
@@ -79,16 +79,23 @@ public:
 	/* REGISTER */
 	/************/
 	std::string demoFile;
+	std::string pickedAnimationFile = "";
+	bool standalonePreview = false;
+	bool standaloneBringToFront = true;
+	float iconSize = 128;
 	void Register() override {
 		// This function will be invoked after (Config)
 
 		/* [REGISTER CUSTOM FILES TYPES HERE] */
 		// Also, you can register types anywhere using (Imm::App::RegisterFileType)
 		// but this can help to auto register once the extension loaded
-		/*std::list<std::string> supportedTypes = { ".xyz" };
-		Imm::App::Types::RegisterFileType(supportedTypes, "ImmExt Test", [](std::string path) {
-			Imm::Notify::Success("ImMobile extension received file:\n" + path);
-		});*/
+		std::list<std::string> supportedTypes = { ".json" };
+		Imm::App::Types::RegisterFileType(supportedTypes, "ImmLottie", [&](std::string path) {
+			pickedAnimationFile = path;
+			if (!Imm::ImGuiEx::Window::IsMinimized(GetWindowID())) {
+				ToggleGUI();
+			}
+		});
 
 		/* [REGISTER CUSTOM INTERVALS HERE] */
 		// Same as types above, you can do that anywhere not only here
@@ -96,12 +103,27 @@ public:
 			//Imm::Notify::Success("Hello, interval just invoked!");
 		});*/
 
+		// Save initial demo
 		demoFile = Imm::Storage::Locations::TempFilesFolder() + "\\lottie_demo.json";
 		if (!Imm::Storage::Manage::IsExists(demoFile)) {
 			Imm::Async::AddTask("Lottie Demo", TaskType::TASK_FILES, [&](std::atomic<bool>& cancelled, std::atomic<int>& progress, std::string& error) {
 				std::string welcome = "{\"v\":\"4.8.0\",\"meta\":{\"g\":\"LottieFiles AE 3.1.1\",\"a\":\"\",\"k\":\"\",\"d\":\"\",\"tc\":\"\"},\"fr\":60,\"ip\":0,\"op\":493,\"w\":428,\"h\":123,\"nm\":\"welcome\",\"ddd\":0,\"assets\":[],\"layers\":[{\"ddd\":0,\"ind\":1,\"ty\":4,\"nm\":\"katman 2 Outlines\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[210.962,63.445,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[217.377,69.099,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.315,\"y\":1},\"o\":{\"x\":0.333,\"y\":0},\"t\":12,\"s\":[{\"i\":[[0,0],[-19.996,3.807],[0,0],[-18.895,3.082],[19.742,-1.29],[-24.256,-8.085],[-0.766,11.744],[5.66,-16.851],[-19.685,5.741],[-1.452,15.251],[7.149,-14.298],[-24.05,0],[-13.969,8.205],[0,0],[4.449,-18.338],[-20.828,10.921],[-24.102,3.075],[0.647,-8.405],[10.851,1.532],[-3.877,8.419],[-6.217,0.509],[-8.064,0.981],[0,0],[0,0],[-9.446,-0.88],[0,0],[-10.502,-2.2],[-11.05,-5.525],[-0.766,11.745],[5.66,-16.851],[-15.599,-0.035],[-2.016,1.583]],\"o\":[[0,0],[14.276,-2.719],[0,0],[15.078,-2.46],[-12.066,0.788],[15.247,5.083],[0.883,-13.542],[-5.204,15.495],[28.1,-8.195],[1.532,-16.085],[-6.678,13.356],[13.262,0],[9.918,-5.825],[0,0],[-2.158,8.896],[19.355,-10.149],[9.78,-1.247],[-0.893,11.617],[-9.912,-1.399],[6.099,-13.245],[15.145,-1.239],[7.884,-0.959],[0,0],[0,0],[10.729,1],[0,0],[10.164,2.129],[12.423,6.212],[0.884,-13.542],[-4.553,13.559],[9.878,0.022],[0,0]],\"v\":[[-188.452,-48.737],[-174.88,37.534],[-150.861,-18.684],[-139.413,37.589],[-115.605,-41.153],[-102.747,24.964],[-71.062,8.04],[-94.211,9.061],[-70.73,37.677],[-25.253,-28.982],[-42.615,-32.301],[-36.232,38.678],[-2.148,2.178],[14.548,-2.029],[-12.773,17.608],[15.027,35.678],[51.708,-0.699],[67.342,18.38],[44.619,38.295],[32.237,14.423],[51.708,-0.699],[79.124,17.623],[92.418,5.764],[86.665,37.388],[107.665,2.07],[112.358,29.353],[133.077,2.635],[138.465,37.258],[179.361,8.554],[156.212,9.575],[175.587,38.838],[194.876,31.741]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":110,\"s\":[{\"i\":[[0,0],[-19.996,3.807],[0,0],[-18.895,3.082],[19.742,-1.29],[-24.256,-8.085],[-0.766,11.744],[5.66,-16.851],[-19.685,5.741],[-1.452,15.251],[7.149,-14.298],[-24.05,0],[-13.969,8.205],[0,0],[4.449,-18.338],[-20.828,10.921],[-24.102,3.075],[0.647,-8.405],[10.851,1.532],[-3.877,8.419],[-6.217,0.509],[-8.064,0.981],[0,0],[0,0],[-9.446,-0.88],[0,0],[-10.502,-2.2],[-11.05,-5.525],[-0.766,11.745],[5.66,-16.851],[-15.599,-0.035],[-2.016,1.583]],\"o\":[[0,0],[14.276,-2.719],[0,0],[15.078,-2.46],[-12.066,0.788],[15.247,5.083],[0.883,-13.542],[-5.204,15.495],[28.1,-8.195],[1.532,-16.085],[-6.678,13.356],[13.262,0],[9.918,-5.825],[0,0],[-2.158,8.896],[19.355,-10.149],[9.78,-1.247],[-0.893,11.617],[-9.912,-1.399],[6.099,-13.245],[15.145,-1.239],[7.884,-0.959],[0,0],[0,0],[10.729,1],[0,0],[10.164,2.129],[12.423,6.212],[0.884,-13.542],[-4.553,13.559],[9.878,0.022],[0,0]],\"v\":[[-187.452,-42.737],[-174.88,37.534],[-150.861,-18.684],[-139.413,37.589],[-115.605,-41.153],[-102.747,24.964],[-71.062,8.04],[-94.211,9.061],[-70.73,37.677],[-25.253,-28.982],[-42.615,-32.301],[-36.232,38.678],[-2.148,2.178],[14.548,-2.029],[-12.773,17.608],[15.027,35.678],[51.708,-0.699],[67.342,18.38],[44.619,38.295],[32.237,14.423],[51.708,-0.699],[79.124,17.623],[92.418,5.764],[86.665,37.388],[107.665,2.07],[111.858,34.353],[133.077,2.635],[138.465,37.258],[179.361,8.554],[156.212,9.575],[175.587,38.838],[194.876,31.741]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":196,\"s\":[{\"i\":[[0,0],[-19.996,3.807],[0,0],[-18.895,3.082],[19.742,-1.29],[-24.256,-8.085],[-0.766,11.744],[5.66,-16.851],[-19.685,5.741],[-1.452,15.251],[7.149,-14.298],[-24.05,0],[-13.969,8.205],[0,0],[4.449,-18.338],[-20.828,10.921],[-24.102,3.075],[0.647,-8.405],[10.851,1.532],[-3.877,8.419],[-6.217,0.509],[-8.064,0.981],[0,0],[0,0],[-9.446,-0.88],[0,0],[-10.605,-1.634],[-11.05,-5.525],[-0.766,11.745],[5.66,-16.851],[-15.599,-0.035],[-2.016,1.583]],\"o\":[[0,0],[14.276,-2.719],[0,0],[15.078,-2.46],[-12.066,0.788],[15.247,5.083],[0.883,-13.542],[-5.204,15.495],[28.1,-8.195],[1.532,-16.085],[-6.678,13.356],[13.262,0],[9.918,-5.825],[0,0],[-2.158,8.896],[19.355,-10.149],[9.78,-1.247],[-0.893,11.617],[-9.912,-1.399],[6.099,-13.245],[15.145,-1.239],[7.884,-0.959],[0,0],[0,0],[10.729,1],[0,0],[12.461,1.921],[12.423,6.212],[0.884,-13.542],[-4.553,13.559],[9.878,0.022],[0,0]],\"v\":[[-187.452,-42.737],[-174.88,37.534],[-150.861,-18.684],[-139.413,37.589],[-115.605,-41.153],[-102.747,24.964],[-71.062,8.04],[-94.21,9.061],[-70.73,37.677],[-25.253,-28.982],[-42.615,-32.301],[-36.232,38.678],[-2.148,2.178],[14.547,-2.029],[-12.773,17.608],[15.027,35.678],[51.708,-0.699],[67.342,18.38],[44.619,38.295],[32.236,14.423],[51.708,-0.699],[79.124,17.623],[92.418,5.764],[86.665,37.388],[107.665,2.07],[111.858,35.853],[133.077,2.635],[138.465,37.258],[179.361,8.554],[156.212,9.575],[175.587,38.838],[197.876,29.741]],\"c\":false}]},{\"t\":292,\"s\":[{\"i\":[[0,0],[-19.996,3.807],[0,0],[-18.895,3.082],[19.742,-1.29],[-24.256,-8.085],[-0.766,11.744],[5.66,-16.851],[-19.685,5.741],[-1.452,15.251],[7.149,-14.298],[-24.05,0],[-13.969,8.205],[0,0],[4.449,-18.338],[-20.828,10.921],[-24.102,3.075],[0.647,-8.405],[10.851,1.532],[-3.877,8.419],[-6.217,0.509],[-8.064,0.981],[0,0],[0,0],[-9.446,-0.88],[0,0],[-10.705,-0.732],[-11.05,-5.525],[-0.766,11.745],[5.66,-16.851],[-15.599,-0.035],[-2.016,1.583]],\"o\":[[0,0],[14.276,-2.719],[0,0],[15.078,-2.46],[-12.066,0.788],[15.247,5.083],[0.883,-13.542],[-5.204,15.495],[28.1,-8.195],[1.532,-16.085],[-6.678,13.356],[13.262,0],[9.918,-5.825],[0,0],[-2.158,8.896],[19.355,-10.149],[9.78,-1.247],[-0.893,11.617],[-9.912,-1.399],[6.099,-13.245],[15.145,-1.239],[7.884,-0.959],[0,0],[0,0],[10.729,1],[0,0],[13.461,0.921],[12.423,6.212],[0.884,-13.542],[-4.553,13.559],[9.878,0.022],[0,0]],\"v\":[[-187.452,-42.737],[-174.88,37.534],[-150.861,-18.684],[-139.413,37.589],[-115.605,-41.153],[-102.747,24.964],[-71.062,8.04],[-94.211,9.061],[-70.73,37.677],[-25.253,-28.982],[-42.615,-32.301],[-36.232,38.678],[-2.148,2.178],[14.548,-2.029],[-12.773,17.608],[15.027,35.678],[51.708,-0.699],[67.342,18.38],[44.619,38.295],[32.237,14.423],[51.708,-0.699],[79.124,17.623],[92.418,5.764],[86.665,37.388],[107.665,2.07],[111.858,35.353],[133.077,2.635],[138.465,37.258],[179.361,8.554],[156.212,9.575],[175.587,38.838],[194.876,31.741]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"tm\",\"s\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.667],\"y\":[1]},\"o\":{\"x\":[0.414],\"y\":[0]},\"t\":292,\"s\":[0]},{\"t\":470,\"s\":[100]}],\"ix\":1},\"e\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.588],\"y\":[1]},\"o\":{\"x\":[0.409],\"y\":[0.273]},\"t\":12,\"s\":[0]},{\"t\":196,\"s\":[100]}],\"ix\":2},\"o\":{\"a\":0,\"k\":0,\"ix\":3},\"m\":1,\"ix\":2,\"nm\":\"Trim Paths 1\",\"mn\":\"ADBE Vector Filter - Trim\",\"hd\":false},{\"ty\":\"gs\",\"o\":{\"a\":0,\"k\":100,\"ix\":9},\"w\":{\"a\":0,\"k\":9,\"ix\":10},\"g\":{\"p\":11,\"k\":{\"a\":0,\"k\":[0,0.008,0.569,0.592,0.093,0.333,0.725,0.478,0.187,0.659,0.882,0.365,0.293,0.829,0.843,0.225,0.399,1,0.804,0.086,0.504,1,0.596,0.112,0.609,1,0.388,0.137,0.712,1,0.29,0.471,0.814,1,0.192,0.804,0.907,0.614,0.467,0.884,1,0.227,0.741,0.965],\"ix\":8}},\"s\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.283,\"y\":1},\"o\":{\"x\":0.333,\"y\":0},\"t\":34,\"s\":[-253.742,-70.793],\"to\":[8.667,8.833],\"ti\":[-8.667,-8.833]},{\"t\":282,\"s\":[-201.742,-17.793]}],\"ix\":4},\"e\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.283,\"y\":1},\"o\":{\"x\":0.333,\"y\":0},\"t\":34,\"s\":[118.488,29.074],\"to\":[10.667,-3.5],\"ti\":[-10.667,3.5]},{\"t\":282,\"s\":[182.488,8.074]}],\"ix\":5},\"t\":1,\"lc\":2,\"lj\":2,\"bm\":0,\"nm\":\"Gradient Stroke 1\",\"mn\":\"ADBE Vector Graphic - G-Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[217.377,69.099],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":608,\"st\":0,\"bm\":0}],\"markers\":[]}";
 				Imm::Storage::Stream::FilePutContents(demoFile, welcome, false, true);
 			});
+		}
+
+		// Restore preview settings
+		standalonePreview = Imm::Config::GetBool("preview_state", false);
+		standaloneBringToFront = Imm::Config::GetBool("preview_front", true);
+		iconSize = Imm::Config::GetFloat("preview_size", 128.f);
+		if (iconSize == 0.f) {
+			iconSize = 128.f;
+		}
+
+		// Ensure file exists before make it default
+		std::string checkPath = Imm::Config::GetString("preview_path", demoFile);
+		if (Imm::Storage::Manage::IsExists(checkPath)) {
+			pickedAnimationFile = checkPath;
 		}
 	}
 
@@ -130,10 +152,20 @@ public:
 	/**************/
 	/* GUI RENDER */
 	/**************/
-	std::string pickedAnimationFile = "";
+	void LottiePreview(float size) {
+		if (!pickedAnimationFile.empty()) {
+			ImLottie::LottieAnimation(pickedAnimationFile.c_str(), ImVec2(size, size), true, 0);
+		}
+		else {
+			ImLottie::LottieAnimation(demoFile.c_str(), ImVec2(size, size), true, 0);
+		}
+		ImLottie::sync(Imm::DirectX::Context::D3DDevice().Get(), Imm::DirectX::Context::D3DContext().Get());
+	}
+
 	void Render() override {
 		// Its better to build window with (Imm::ImGuiEx::Window)
 		// this will allow ImMobile to apply its own windows behavior
+		float size = iconSize * Imm::Screen::Scale();
 
 		// [BEGIN | DON'T REMOVE]
 		if (Imm::ImGuiEx::Window::Begin(flags)) {
@@ -146,20 +178,43 @@ public:
 				std::string filters = "Lottie{.json},.*";
 				Imm::Storage::Pickers::ChooseFile([&](const std::vector<PathUWP> files) {
 					std::string path = files[0].ToString();
+					ImLottie::destroy();
+					ImLottie::init();
 					pickedAnimationFile = path;
+
+					Imm::Config::SaveString("preview_path", pickedAnimationFile);
 				}, filters);
 			}
-			ImGui::Separator();
-			static float iconSize = 128;
-			float size = iconSize * Imm::Screen::Scale();
-			Imm::ImGuiEx::Position::CenterItemX(size);
-			if (!pickedAnimationFile.empty()) {
-				ImLottie::LottieAnimation(pickedAnimationFile.c_str(), ImVec2(size, size), true, 0);
+			ImGui::SeparatorText("Settings");
+			ImGui::Text("Size");
+			ImGui::SetNextItemWidth(ImGui::GetContentRegionAvail().x);
+			if (ImGui::DragFloat("", &iconSize, 2.0f, 48.0f, 512.0f)) {
+				Imm::Config::SaveFloat("preview_size", iconSize);
+			}
+
+			if (ImGui::Checkbox("Standalone Preview", &standalonePreview)) {
+				Imm::Config::SaveBool("preview_state", standalonePreview);
+			}
+
+			if (!standalonePreview) {
+				ImGui::BeginDisabled();
+			}
+			if (ImGui::Checkbox("Standalone Always Top", &standaloneBringToFront)) {
+				Imm::Config::SaveBool("preview_front", standaloneBringToFront);
+			}
+			if (!standalonePreview) {
+				ImGui::EndDisabled();
+			}
+
+			ImGui::SeparatorText("Preview");
+			if (standalonePreview) {
+				Imm::ImGuiEx::Elements::TextCentered("Standalone Enabled!");
 			}
 			else {
-				ImLottie::LottieAnimation(demoFile.c_str(), ImVec2(size, size), true, 0);
+				Imm::ImGuiEx::Position::CenterItemX(size);
+				LottiePreview(size);
 			}
-			ImLottie::sync(Imm::DirectX::Context::D3DDevice().Get(), Imm::DirectX::Context::D3DContext().Get());
+
 		}
 		else {
 			// Window is not active
@@ -168,6 +223,23 @@ public:
 
 		// [END  | DON'T REMOVE]
 		Imm::ImGuiEx::Window::End();
+
+		// Standalone Preview
+		if (standalonePreview) {
+			auto pflags = ImGuiWindowFlags_AlwaysAutoResize
+				| ImGuiWindowFlags_NoNav
+				| ImGuiWindowFlags_NoBackground
+				| ImGuiWindowFlags_NoCollapse
+				| ImGuiWindowFlags_NoTitleBar;
+			if (ImGui::Begin("Lottie Preview###lottie_preview", &standalonePreview, pflags)) {
+				if (standaloneBringToFront) {
+					ImGui::BringWindowToDisplayFront(ImGui::GetCurrentWindow());
+				}
+				LottiePreview(size);
+				ImGui::End();
+			}
+		}
+
 	}
 
 	/**********/
