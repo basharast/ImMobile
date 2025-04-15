@@ -52,6 +52,15 @@ https://github.com/user-attachments/assets/5cf287da-eef7-4137-8b21-23d9639d00c8
 
 </details>
 
+
+<details>
+
+  <summary><strong>On UI Preview (Click Here)</strong></summary>
+  <br>
+<img src="https://github.com/user-attachments/assets/a9d97498-03b4-402e-adff-663db52a0b73" width="450"/>
+
+</details>
+
 ## Libraries
 
 - [FreeType](https://github.com/freetype) 
