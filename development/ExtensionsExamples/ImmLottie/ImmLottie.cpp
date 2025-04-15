@@ -150,7 +150,7 @@ public:
 				}, filters);
 			}
 			ImGui::Separator();
-			static float iconSize = 256;
+			static float iconSize = 128;
 			float size = iconSize * Imm::Screen::Scale();
 			Imm::ImGuiEx::Position::CenterItemX(size);
 			if (!pickedAnimationFile.empty()) {
@@ -281,6 +281,7 @@ public:
 	void Unloading() override {
 		// ImMobile is unloading the extension
 		// cleanup your stuff to avoid failing
+		ImLottie::destroy();
 	}
 
 	~ImmExtension() override {
