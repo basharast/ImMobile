@@ -221,17 +221,72 @@ public:
 											currentOperation = "Installing Dependencies..";
 											std::string dependencies = expectedPackageFolder + "\\Dependencies";
 											auto dependenciesFiles = Imm::Storage::Manage::GetFolderContents(dependencies);
-											for (auto& depsItem : dependenciesFiles) {
-												Imm::Packages::Install(depsItem.fullName);
-											}
 
-											currentOperation = "Please wait..";
-											Sleep(3000);
-											currentOperation = "Installing WUT..";
-											Imm::Packages::Install(packagePath);
+											// Because API currently don't provide direct way to install we use in raw way
+											winrt::Windows::Management::Deployment::PackageManager packageManager;
+											winrt::Windows::Management::Deployment::DeploymentOptions deploymentOptions = winrt::Windows::Management::Deployment::DeploymentOptions::None;
+											winrt::Windows::Management::Deployment::DeploymentResult result(nullptr);
+
+											try {
+												winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::Uri> dependenciesList{};
+												if (!dependenciesFiles.empty()) {
+													int indexer = 1;
+													std::string total = std::to_string(dependenciesFiles.size());
+													for (auto& depsItem : dependenciesFiles) {
+														result = nullptr;
+														try {
+															currentOperation = "Installing Dependencies ( " + std::to_string(indexer) + " of " + total + ")..";
+															winrt::Windows::Foundation::Uri depsUri{ convert(depsItem.fullName) };
+															auto asyncDepsOperation = packageManager.AddPackageAsync(depsUri, nullptr, deploymentOptions);
+															asyncDepsOperation.Progress([&](auto&& sender, winrt::Windows::Management::Deployment::DeploymentProgress percentage) {
+																// Display current progress percentage
+																Imm::App::UI::ProgressShow(static_cast<float>(percentage.percentage));
+															});
+															result = asyncDepsOperation.get();
+														}
+														catch (...) {
+
+														}
+														indexer++;
+													}
+													Sleep(1000);
+												}
+
+												Imm::App::UI::ProgressHide();
+												currentOperation = "Installing WUT..";
+												Sleep(1500);
+												winrt::Windows::Foundation::Uri packageUri{ convert(packagePath) };
+												auto asyncOperation = packageManager.AddPackageAsync(packageUri, nullptr, deploymentOptions);
+												asyncOperation.Progress([&](auto&& sender, winrt::Windows::Management::Deployment::DeploymentProgress percentage) {
+													// Display current progress percentage
+													Imm::App::UI::ProgressShow(static_cast<float>(percentage.percentage));
+												});
+												result = nullptr;
+												result = asyncOperation.get();
+											}
+											catch (const std::exception& e) {
+												Imm::Logger::Error("Exception: " + std::string(e.what()));
+											}
+											catch (...) {
+												Imm::Logger::Error("Exception: Something went wrong!");
+											}
+											Imm::App::UI::ProgressHide();
+
+											if (result) {
+												if (result.ErrorText().empty()) {
+													Imm::Notify::Success("WUT installed successfully");
+												}
+												else {
+													std::wstring reason(result.ErrorText().data());
+													Imm::Notify::Error("WUT failed: " + convert(reason));
+												}
+											}
+											else {
+												Imm::Notify::Error("WUT failed: unknown error");
+											}
 										}
 										else {
-											Imm::Notify::Error("Locate WUT package, check logs");
+											Imm::Notify::Error("Locate WUT package failed, check logs");
 										}
 										installationInProgress = false;
 									}
