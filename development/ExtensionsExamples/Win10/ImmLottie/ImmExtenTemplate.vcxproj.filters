@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{7d631577-2f98-4dad-a58a-81ca447fea5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{5b8d2ab3-c2c4-4e8d-acc2-1e7f1f368654}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Others">
+      <UniqueIdentifier>{15495947-241d-48af-beda-d674b6821970}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extras">
+      <UniqueIdentifier>{2c360152-d06e-41aa-a719-ab99bd9c3433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{0849ad18-189f-4f83-948e-7dc7fa4a2737}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{e3c9bc65-fe99-4feb-97c5-f8da34d426e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\freetype">
+      <UniqueIdentifier>{6acef6ec-ba6f-444d-bfcd-5ebf2cc1ceb0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Others\dllmain.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\StorageExtensions.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\StoragePath.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="ImmLottie.cpp" />
+    <ClCompile Include="Core\imottie_renderer.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\freetype\v_ft_math.cpp">
+      <Filter>Core\freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\freetype\v_ft_raster.cpp">
+      <Filter>Core\freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\freetype\v_ft_stroker.cpp">
+      <Filter>Core\freetype</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GUI\imgui.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\imgui_shared.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\imgui_internal.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\imstb_textedit.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\implot_internal.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\implot.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\IExtension.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImmApiProvider.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\pch.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\IconsFontAwesome5.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ggml.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\StorageExtensions.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\StorageInfo.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\StoragePath.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\nlohmann_json.hpp">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\archive.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\archive_entry.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="ImmApiProviderBridge.h" />
+    <ClInclude Include="ImmLottie.h" />
+  </ItemGroup>
+</Project>

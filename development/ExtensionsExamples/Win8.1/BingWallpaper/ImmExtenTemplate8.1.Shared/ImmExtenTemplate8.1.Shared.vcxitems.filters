@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Extras\ggml.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Extras\picojson.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\IconsFontAwesome5.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\imgui.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\imgui_internal.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\imgui_shared.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\implot.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\implot_internal.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\imstb_textedit.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\IExtension.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\ImmApiProvider.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\pch.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\StorageExtensions.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\StorageInfo.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\StoragePath.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ImmApiProviderBridge.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Extras\archive.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Extras\archive_entry.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)BingWallpaper8.1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\StorageExtensions.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\StoragePath.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Others\dllmain.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)BingWallpaper8.1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Extras">
+      <UniqueIdentifier>{76aec1b8-9ad4-4618-9f00-82642fa0e28f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{5adfb869-a7af-4b14-bd20-30995140d7c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{bb0e2302-2184-4668-8867-d056690aa05e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{f85aafab-3259-4df7-8bea-5240994742b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Others">
+      <UniqueIdentifier>{3c8f878c-a38f-4b1e-9272-5ef3b1a2f236}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

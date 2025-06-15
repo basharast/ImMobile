@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ImmExtenTemplate8.1", "ImmExtenTemplate8.1", "{7C506FAF-93B0-47E1-8F6A-E1B094DD80CB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImmExtenTemplate8.1.Shared", "ImmExtenTemplate8.1.Shared\ImmExtenTemplate8.1.Shared.vcxitems", "{A017B937-11C2-438E-8B0F-56E28F78FE37}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImmExtenTemplate8.1.Windows", "ImmExtenTemplate8.1.Windows\ImmExtenTemplate8.1.Windows.vcxproj", "{A085BE23-B0FA-492F-AFFE-1F5D35EF89DF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImmExtenTemplate8.1.WindowsPhone", "ImmExtenTemplate8.1.WindowsPhone\ImmExtenTemplate8.1.WindowsPhone.vcxproj", "{2143BF5A-B695-470A-9C41-A84F937EF0DB}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ImmExtenTemplate8.1.Shared\ImmExtenTemplate8.1.Shared.vcxitems*{2143bf5a-b695-470a-9c41-a84f937ef0db}*SharedItemsImports = 4
+		ImmExtenTemplate8.1.Shared\ImmExtenTemplate8.1.Shared.vcxitems*{a017b937-11c2-438e-8b0f-56e28f78fe37}*SharedItemsImports = 9
+		ImmExtenTemplate8.1.Shared\ImmExtenTemplate8.1.Shared.vcxitems*{a085be23-b0fa-492f-affe-1f5d35ef89df}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Optimized|ARM = Optimized|ARM
+		Optimized|x64 = Optimized|x64
+		Optimized|x86 = Optimized|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A085BE23-B0FA-492F-AFFE-1F5D35EF89DF}.Optimized|ARM.ActiveCfg = Optimized|ARM
+		{A085BE23-B0FA-492F-AFFE-1F5D35EF89DF}.Optimized|ARM.Build.0 = Optimized|ARM
+		{A085BE23-B0FA-492F-AFFE-1F5D35EF89DF}.Optimized|x64.ActiveCfg = Optimized|x64
+		{A085BE23-B0FA-492F-AFFE-1F5D35EF89DF}.Optimized|x64.Build.0 = Optimized|x64
+		{A085BE23-B0FA-492F-AFFE-1F5D35EF89DF}.Optimized|x86.ActiveCfg = Optimized|Win32
+		{A085BE23-B0FA-492F-AFFE-1F5D35EF89DF}.Optimized|x86.Build.0 = Optimized|Win32
+		{2143BF5A-B695-470A-9C41-A84F937EF0DB}.Optimized|ARM.ActiveCfg = Optimized|ARM
+		{2143BF5A-B695-470A-9C41-A84F937EF0DB}.Optimized|ARM.Build.0 = Optimized|ARM
+		{2143BF5A-B695-470A-9C41-A84F937EF0DB}.Optimized|x64.ActiveCfg = Optimized|Win32
+		{2143BF5A-B695-470A-9C41-A84F937EF0DB}.Optimized|x86.ActiveCfg = Optimized|Win32
+		{2143BF5A-B695-470A-9C41-A84F937EF0DB}.Optimized|x86.Build.0 = Optimized|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A017B937-11C2-438E-8B0F-56E28F78FE37} = {7C506FAF-93B0-47E1-8F6A-E1B094DD80CB}
+		{A085BE23-B0FA-492F-AFFE-1F5D35EF89DF} = {7C506FAF-93B0-47E1-8F6A-E1B094DD80CB}
+		{2143BF5A-B695-470A-9C41-A84F937EF0DB} = {7C506FAF-93B0-47E1-8F6A-E1B094DD80CB}
+	EndGlobalSection
+EndGlobal

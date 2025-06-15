@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Optimized|ARM">
+      <Configuration>Optimized</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Optimized|ARM64">
+      <Configuration>Optimized</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Optimized|Win32">
+      <Configuration>Optimized</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Optimized|x64">
+      <Configuration>Optimized</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{a8e9332b-bb86-470f-b72b-6a8b3359df68}</ProjectGuid>
+    <Keyword>DynamicLibrary</Keyword>
+    <RootNamespace>ImmExtenTemplate</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|ARM64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Optimized|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Optimized|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Optimized|ARM64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Optimized|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|Win32'">
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|ARM'">
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|ARM64'">
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|x64'">
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>$(ProjectDir)GUI;$(ProjectDir)Helpers;$(ProjectDir)Headers;$(ProjectDir)Extras;$(ProjectDir)Extras\ANGLE;$(ProjectDir)Extras\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_ITERATOR_DEBUG_LEVEL=0;WINRT_NO_MAKE_DETECTION;NDEBUG;IMGUI_DISABLE_DEBUG_TOOLS;NOMINMAX;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;GGML_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <UseFullPaths>false</UseFullPaths>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalDependencies>WindowsApp.lib;$(ProjectDir)Libs\$(Platform)\ImMobile.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|arm'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)GUI;$(ProjectDir)Helpers;$(ProjectDir)Headers;$(ProjectDir)Extras;$(ProjectDir)Extras\ANGLE;$(ProjectDir)Extras\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_ITERATOR_DEBUG_LEVEL=0;WINRT_NO_MAKE_DETECTION;NDEBUG;IMGUI_DISABLE_DEBUG_TOOLS;NOMINMAX;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;GGML_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <Optimization>MaxSpeed</Optimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <UseFullPaths>false</UseFullPaths>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalDependencies>WindowsApp.lib;$(ProjectDir)Libs\$(Platform)\ImMobile.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|arm'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>$(ProjectDir)GUI;$(ProjectDir)Helpers;$(ProjectDir)Headers;$(ProjectDir)Extras;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;IMGUI_DISABLE_DEBUG_TOOLS;NOMINMAX;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;GGML_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalDependencies>WindowsApp.lib;$(ProjectDir)Libs\$(Platform)\ImMobile.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)$(Platform)\$(Configuration)\$(MSBuildProjectName)\$(ProjectName).dll" "$(SolutionDir)NTUniversal\extensions\"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist "$(SolutionDir)copyLibs.bat" (
+    call "$(SolutionDir)copyLibs.bat" "$(SolutionDir)" "$(Platform)" "$(Configuration)"
+)
+</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|ARM64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>$(ProjectDir)GUI;$(ProjectDir)Helpers;$(ProjectDir)Headers;$(ProjectDir)Extras;$(ProjectDir)Extras\ANGLE;$(ProjectDir)Extras\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_ITERATOR_DEBUG_LEVEL=0;WINRT_NO_MAKE_DETECTION;NDEBUG;IMGUI_DISABLE_DEBUG_TOOLS;NOMINMAX;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;GGML_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <UseFullPaths>false</UseFullPaths>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalDependencies>WindowsApp.lib;$(ProjectDir)Libs\$(Platform)\ImMobile.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Optimized|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>$(ProjectDir)GUI;$(ProjectDir)Helpers;$(ProjectDir)Headers;$(ProjectDir)Extras;$(ProjectDir)Extras\ANGLE;$(ProjectDir)Extras\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_ITERATOR_DEBUG_LEVEL=0;WINRT_NO_MAKE_DETECTION;NDEBUG;IMGUI_DISABLE_DEBUG_TOOLS;NOMINMAX;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;GGML_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <UseFullPaths>false</UseFullPaths>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalDependencies>WindowsApp.lib;$(ProjectDir)Libs\$(Platform)\ImMobile.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Extras\ANGLE\angle_gl.h" />
+    <ClInclude Include="Extras\ANGLE\angle_windowsstore.h" />
+    <ClInclude Include="Extras\ANGLE\EGL\egl.h" />
+    <ClInclude Include="Extras\ANGLE\EGL\eglext.h" />
+    <ClInclude Include="Extras\ANGLE\EGL\eglext_angle.h" />
+    <ClInclude Include="Extras\ANGLE\EGL\eglplatform.h" />
+    <ClInclude Include="Extras\ANGLE\GLES2\gl2.h" />
+    <ClInclude Include="Extras\ANGLE\GLES2\gl2ext.h" />
+    <ClInclude Include="Extras\ANGLE\GLES2\gl2ext_angle.h" />
+    <ClInclude Include="Extras\ANGLE\GLES2\gl2platform.h" />
+    <ClInclude Include="Extras\ANGLE\GLES3\gl3.h" />
+    <ClInclude Include="Extras\ANGLE\GLES3\gl31.h" />
+    <ClInclude Include="Extras\ANGLE\GLES3\gl32.h" />
+    <ClInclude Include="Extras\ANGLE\GLES3\gl3platform.h" />
+    <ClInclude Include="Extras\ANGLE\KHR\khrplatform.h" />
+    <ClInclude Include="Extras\archive.h" />
+    <ClInclude Include="Extras\archive_entry.h" />
+    <ClInclude Include="Extras\ggml.h" />
+    <ClInclude Include="Extras\nlohmann_json.hpp" />
+    <ClInclude Include="Extras\SDL\include\begin_code.h" />
+    <ClInclude Include="Extras\SDL\include\close_code.h" />
+    <ClInclude Include="Extras\SDL\include\SDL.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_assert.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_atomic.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_audio.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_bits.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_blendmode.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_clipboard.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_config.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_config_android.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_config_emscripten.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_config_iphoneos.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_config_macosx.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_config_minimal.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_config_os2.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_config_pandora.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_config_windows.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_config_winrt.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_copying.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_cpuinfo.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_egl.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_endian.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_error.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_events.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_filesystem.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_gamecontroller.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_gesture.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_haptic.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_hidapi.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_hints.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_joystick.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_keyboard.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_keycode.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_loadso.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_locale.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_log.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_main.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_messagebox.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_metal.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_misc.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_mouse.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_mutex.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_name.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_opengl.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_opengles.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_opengles2.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_opengles2_gl2.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_opengl_glext.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_pixels.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_platform.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_power.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_quit.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_rect.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_render.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_revision.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_rwops.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_scancode.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_sensor.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_shape.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_stdinc.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_surface.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_system.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_syswm.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_assert.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_common.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_compare.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_crc32.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_font.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_fuzzer.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_harness.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_images.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_log.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_md5.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_memory.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_test_random.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_thread.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_timer.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_touch.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_types.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_version.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_video.h" />
+    <ClInclude Include="Extras\SDL\include\SDL_vulkan.h" />
+    <ClInclude Include="GUI\IconsFontAwesome5.h" />
+    <ClInclude Include="GUI\imgui.h" />
+    <ClInclude Include="GUI\imgui_internal.h" />
+    <ClInclude Include="GUI\imgui_shared.h" />
+    <ClInclude Include="GUI\implot.h" />
+    <ClInclude Include="GUI\implot_internal.h" />
+    <ClInclude Include="GUI\imstb_textedit.h" />
+    <ClInclude Include="Headers\IExtension.h" />
+    <ClInclude Include="Headers\ImmApiProvider.h" />
+    <ClInclude Include="Headers\pch.h" />
+    <ClInclude Include="Helpers\StorageExtensions.h" />
+    <ClInclude Include="Helpers\StorageInfo.h" />
+    <ClInclude Include="Helpers\StoragePath.h" />
+    <ClInclude Include="ImmApiProviderBridge.h" />
+    <ClInclude Include="ImmApiProviderBridgeC.h" />
+    <ClInclude Include="ImmExtenTemplate.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Helpers\StorageExtensions.cpp" />
+    <ClCompile Include="Helpers\StoragePath.cpp" />
+    <ClCompile Include="ImmExtenTemplate.cpp" />
+    <ClCompile Include="Others\dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Extras\SDL\include\SDL_config.h.cmake" />
+    <None Include="Extras\SDL\include\SDL_config.h.in" />
+    <None Include="Extras\SDL\include\SDL_revision.h.cmake" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

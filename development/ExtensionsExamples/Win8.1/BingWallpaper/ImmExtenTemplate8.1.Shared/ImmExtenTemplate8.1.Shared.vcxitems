@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{a017b937-11c2-438e-8b0f-56e28f78fe37}</ItemsProjectGuid>
+    <ItemsRootNamespace>ImmExtenTemplate8_1</ItemsRootNamespace>
+    <ItemsProjectName>ImmExtenTemplate8.1.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Extras\archive.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Extras\archive_entry.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Extras\ggml.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Extras\picojson.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\IconsFontAwesome5.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\imgui.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\imgui_internal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\imgui_shared.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\implot.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\implot_internal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GUI\imstb_textedit.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\IExtension.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\ImmApiProvider.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Headers\pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\StorageExtensions.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\StorageInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\StoragePath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ImmApiProviderBridge.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)BingWallpaper8.1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\StorageExtensions.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\StoragePath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)BingWallpaper8.1.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Others\dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{7d631577-2f98-4dad-a58a-81ca447fea5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{5b8d2ab3-c2c4-4e8d-acc2-1e7f1f368654}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Others">
+      <UniqueIdentifier>{15495947-241d-48af-beda-d674b6821970}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extras">
+      <UniqueIdentifier>{2c360152-d06e-41aa-a719-ab99bd9c3433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{0849ad18-189f-4f83-948e-7dc7fa4a2737}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extras\SDL">
+      <UniqueIdentifier>{afbc4ad9-b67f-456b-8889-22aad939fdb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extras\SDL\include">
+      <UniqueIdentifier>{e3b4a569-4cce-48b4-8c24-6375821eb266}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extras\ANGLE">
+      <UniqueIdentifier>{d7f4b344-8967-4e87-a337-d5903c87cf46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extras\ANGLE\EGL">
+      <UniqueIdentifier>{ad1d374d-d41e-4f59-a60b-a2390cbc6e39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extras\ANGLE\GLES2">
+      <UniqueIdentifier>{c2e5fa45-e20f-4828-8864-1eadd26ec871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extras\ANGLE\GLES3">
+      <UniqueIdentifier>{0989e7d4-ba0c-4e97-9bc5-e47620deb89e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extras\ANGLE\KHR">
+      <UniqueIdentifier>{c82965e9-61d1-4cf3-8f2c-36d637b050a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ImmExtenTemplate.cpp" />
+    <ClCompile Include="Others\dllmain.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\StorageExtensions.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\StoragePath.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ImmExtenTemplate.h" />
+    <ClInclude Include="GUI\imgui.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\imgui_shared.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\imgui_internal.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\imstb_textedit.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\implot_internal.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\implot.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\IExtension.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImmApiProvider.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\pch.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\IconsFontAwesome5.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ggml.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\StorageExtensions.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\StorageInfo.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\StoragePath.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\nlohmann_json.hpp">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\archive.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\archive_entry.h">
+      <Filter>Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="ImmApiProviderBridge.h" />
+    <ClInclude Include="ImmApiProviderBridgeC.h" />
+    <ClInclude Include="Extras\SDL\include\begin_code.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\close_code.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_assert.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_atomic.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_audio.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_bits.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_blendmode.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_clipboard.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_config.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_config_android.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_config_emscripten.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_config_iphoneos.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_config_macosx.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_config_minimal.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_config_os2.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_config_pandora.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_config_windows.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_config_winrt.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_copying.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_cpuinfo.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_egl.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_endian.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_error.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_events.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_filesystem.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_gamecontroller.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_gesture.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_haptic.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_hidapi.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_hints.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_joystick.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_keyboard.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_keycode.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_loadso.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_locale.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_log.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_main.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_messagebox.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_metal.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_misc.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_mouse.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_mutex.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_name.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_opengl.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_opengl_glext.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_opengles.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_opengles2.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_opengles2_gl2.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_opengles2_gl2ext.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_opengles2_gl2platform.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_opengles2_khrplatform.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_pixels.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_platform.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_power.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_quit.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_rect.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_render.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_revision.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_rwops.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_scancode.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_sensor.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_shape.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_stdinc.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_surface.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_system.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_syswm.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_assert.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_common.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_compare.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_crc32.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_font.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_fuzzer.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_harness.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_images.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_log.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_md5.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_memory.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_test_random.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_thread.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_timer.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_touch.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_types.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_version.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_video.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\SDL\include\SDL_vulkan.h">
+      <Filter>Extras\SDL\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\angle_gl.h">
+      <Filter>Extras\ANGLE</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\angle_windowsstore.h">
+      <Filter>Extras\ANGLE</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\EGL\egl.h">
+      <Filter>Extras\ANGLE\EGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\EGL\eglext.h">
+      <Filter>Extras\ANGLE\EGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\EGL\eglext_angle.h">
+      <Filter>Extras\ANGLE\EGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\EGL\eglplatform.h">
+      <Filter>Extras\ANGLE\EGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\GLES2\gl2.h">
+      <Filter>Extras\ANGLE\GLES2</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\GLES2\gl2ext.h">
+      <Filter>Extras\ANGLE\GLES2</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\GLES2\gl2ext_angle.h">
+      <Filter>Extras\ANGLE\GLES2</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\GLES2\gl2platform.h">
+      <Filter>Extras\ANGLE\GLES2</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\KHR\khrplatform.h">
+      <Filter>Extras\ANGLE\KHR</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\GLES3\gl3platform.h">
+      <Filter>Extras\ANGLE\GLES3</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\GLES3\gl31.h">
+      <Filter>Extras\ANGLE\GLES3</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\GLES3\gl32.h">
+      <Filter>Extras\ANGLE\GLES3</Filter>
+    </ClInclude>
+    <ClInclude Include="Extras\ANGLE\GLES3\gl3.h">
+      <Filter>Extras\ANGLE\GLES3</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Extras\SDL\include\SDL_config.h.cmake">
+      <Filter>Extras\SDL\include</Filter>
+    </None>
+    <None Include="Extras\SDL\include\SDL_config.h.in">
+      <Filter>Extras\SDL\include</Filter>
+    </None>
+    <None Include="Extras\SDL\include\SDL_revision.h.cmake">
+      <Filter>Extras\SDL\include</Filter>
+    </None>
+  </ItemGroup>
+</Project>
