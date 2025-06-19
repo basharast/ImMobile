@@ -12,7 +12,6 @@ imm.resetRuntime();
 /********************/
 /* JSRuntime Render */
 /********************/
-// Render is not supported for now (future usage)
 function render(visible) {
     // [BEGIN | DON'T REMOVE]
     if (imm.WindowBegin()) {
@@ -189,6 +188,8 @@ async function startTest() {
     //imm.inputDialog("Test Input", "Enter your name", inputDialogCallback);
 
     //imm.std.gc();
+
+    //console.log(imm.runCMD("dir $data"));
 }
 
 // Update time immediately and then every second
