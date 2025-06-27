@@ -53,6 +53,9 @@ Some key notes:
 - `void Unloading() override` is helpful to avoid DLL lock on unload
 - Whenever you have Win32 memory stuff we can replace them with `Imm::Memory::VirtualAlloc`
 - `Imm::Memory::` provides solution for UWP limitations so we can keep Win32 input as is
+- It's always better to replace FILE stream with our replacements for UWP access
+- FILE stream APIs are at `Imm::Storage::Stream`
+- When we use our FILE stream replacements, we should ensure all related calls replaced as well
 - Some extra APIs may need to be implemented at `ImmApiProviderBridge.h` when we need them
 - The 8.1 template has `8.1` at the end of files names like `ImmExtenTemplate8.1.cpp`
 - The template name (output DLL) should be changed for something else to avoid collisions
