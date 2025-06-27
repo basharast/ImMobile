@@ -35,13 +35,13 @@ The structure is like:
 -- Headers (Our core headers)
 --- ImmApiProvider.h (Here the APIs defined)
 
--- Helpers (String helpers, we also have APIs for those)
+-- Helpers (String/Storage helpers, we also have APIs for those)
 -- Others (Not used)
 
 -- ImmApiProviderBridge.h (Bridge to expose APIs to CPP)
 -- ImmApiProviderBridgeC.h (Bridge to expose APIs to C)
 
--- ImmExtenTemplate.cpp (Our main extension code with few example at the end)
+-- ImmExtenTemplate.cpp (Our main extension code with examples at the end)
 
 Some key notes:
 - We can access APIs using `Imm::` namespace
