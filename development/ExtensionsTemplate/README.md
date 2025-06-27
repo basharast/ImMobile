@@ -13,6 +13,15 @@ The main UI environment is ImGui, runtime environment is UWP
 
 however, the extension template provide APIs to resolve a lot of UWP limitations
 
+Extension template provide two projects:
+
+- Win10
+- Win8.1
+
+Win10 project is C++/WinRT and Win8.1 is C++/CX
+
+============
+
 The structure is like:
 
 - Root
