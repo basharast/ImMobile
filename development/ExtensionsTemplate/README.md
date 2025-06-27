@@ -31,8 +31,10 @@ The structure is like:
 --- libarchive (we have APIs for this)
 
 -- GUI (ImGui headers)
+
 -- Headers (Our core headers)
--- ImmApiProvider.h (Here the APIs defined)
+--- ImmApiProvider.h (Here the APIs defined)
+
 -- Helpers (String helpers, we also have APIs for those)
 -- Others (Not used)
 
