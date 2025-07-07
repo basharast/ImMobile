@@ -158,7 +158,7 @@ public:
 						// Prepare compatible version
 						std::string filename = "";
 						std::string package = "";
-						if (Imm::Utils::String::IsCompatible("10.0.15603.0", currentBuild) && !preferWUTMini) {
+						if (Imm::Utils::String::IsCompatible("10.0.15063.0", currentBuild) && !preferWUTMini) {
 							filename = "WUT 1.5.0_ARM.zip";
 							package = "WUT_1.5.0.0_ARM.appx";
 						}
