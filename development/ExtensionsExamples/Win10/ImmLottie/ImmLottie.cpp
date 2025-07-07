@@ -8,6 +8,16 @@
 
 #include "ImmLottie.h"
 
+void ForceImGuiVertexUpdate() {
+	float t = ImGui::GetTime();
+	ImU32 color = ImGui::GetColorU32(ImVec4(1, 1, 1, 1)); // fully transparent
+	color ^= (static_cast<int>(t * 1000) & 0xFF); // modify color slightly
+
+	ImDrawList* drawList = ImGui::GetWindowDrawList();
+	ImVec2 p = ImGui::GetCursorScreenPos();
+	drawList->AddRect(p, ImVec2(p.x + 1, p.y + 1), color);
+}
+
 class ImmExtension : public IExtension {
 public:
 	/***************/
@@ -128,6 +138,8 @@ public:
 
 		apiFunctions.ImDrawOverrideImm(createdExtension, static_cast<int>(ImMobileOverrides::IMM_OVERRIDE_FREEDRAW), [&]() {
 			// Standalone Preview
+			static ImVec2 lastPos = ImVec2(-1, -1); // invalid starting value
+			bool moved = false;
 			if (standalonePreview) {
 				auto pflags = ImGuiWindowFlags_AlwaysAutoResize
 					| ImGuiWindowFlags_NoNav
@@ -139,11 +151,23 @@ public:
 						ImGui::BringWindowToDisplayFront(ImGui::GetCurrentWindow());
 					}
 
+					ImVec2 currentPos = ImGui::GetWindowPos();
+					if (lastPos.x != -1 && (currentPos.x != lastPos.x || currentPos.y != lastPos.y)) {
+						moved = true;
+					}
+					lastPos = currentPos; // update for next frame
+
 					float size = iconSize * Imm::Screen::Scale();
 					LottiePreview(size);
+
+					if (moved) {
+						SaveImGuiConfigs();
+					}
+
 					ImGui::End();
 				}
 			}
+
 		});
 	}
 
@@ -173,6 +197,7 @@ public:
 	/* GUI RENDER */
 	/**************/
 	void LottiePreview(float size) {
+		ForceImGuiVertexUpdate();
 		if (!pickedAnimationFile.empty()) {
 			ImLottie::LottieAnimation(pickedAnimationFile.c_str(), ImVec2(size, size), true, 0);
 		}
