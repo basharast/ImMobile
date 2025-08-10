@@ -1,54 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>ImMobile 1.2.1</title>
+    <meta charset="UTF-8" />
+    <title>ImMobile 1.2.1 — Downloads</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg: #0b1020;
+            --card: #0f172a;
+            --card-2: #111a33;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --ring: rgba(96, 165, 250, .25);
+            --cyan: #22d3ee;
+            --blue: #60a5fa;
+            --amber: #fbbf24;
+            --rose: #fb7185;
+            --emerald: #34d399;
+            --violet: #a78bfa;
+            --radius: 16px;
+            --radius-sm: 12px;
+            --shadow: 0 14px 36px rgba(0, 0, 0, .35);
+            --maxw: 980px;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #f7fafc;
+                --card: #ffffff;
+                --card-2: #f2f5fb;
+                --text: #0b1020;
+                --muted: #4b5563;
+                --shadow: 0 14px 36px rgba(2, 6, 23, .08)
+            }
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
         body {
-            font-family: sans-serif;
-            margin: 40px;
-            background-color: #f7f7f7;
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            background:
+                radial-gradient(1200px 800px at 70% -10%, #13203f 0%, transparent 60%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.6;
         }
-        h1 {
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 24px 20px 60px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            backdrop-filter: saturate(180%) blur(10px);
+            background: linear-gradient(180deg, rgba(2, 6, 23, .75), rgba(2, 6, 23, .35));
+            border-bottom: 1px solid rgba(255, 255, 255, .06);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 14px 20px
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            letter-spacing: .2px;
+        }
+
+        .ver {
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: .85rem;
+            font-weight: 700;
+            background: rgba(96, 165, 250, .12);
+            border: 1px solid rgba(96, 165, 250, .28)
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: linear-gradient(180deg, var(--card-2), var(--card));
+            border: 1px solid rgba(255, 255, 255, .12);
+            box-shadow: var(--shadow);
+            font-weight: 600;
+            transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, .22)
+        }
+
+        .btn.ghost {
+            background: transparent
+        }
+
+        .i {
+            width: 20px;
+            height: 20px
+        }
+
+        main {
+            padding: 30px 0
+        }
+
+        .hero {
+            background:
+                radial-gradient(900px 520px at 95% -20%, color-mix(in oklab, var(--cyan) 18%, transparent), transparent 68%),
+                radial-gradient(700px 420px at 0% 110%, color-mix(in oklab, var(--violet) 14%, transparent), transparent 70%),
+                linear-gradient(180deg, var(--card-2), var(--card));
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 26px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            margin: 0 0 6px;
+            font-size: clamp(28px, 5vw, 40px);
+            line-height: 1.15;
+            letter-spacing: .3px
+        }
+
+        .hero p {
+            margin: 0;
+            color: var(--muted)
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 1fr 1fr
+        }
+
+        @media (max-width: 760px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(420px 220px at 110% -20%, color-mix(in oklab, var(--accent) 18%, transparent), transparent 65%),
+                radial-gradient(320px 200px at -10% 120%, color-mix(in oklab, var(--accent) 12%, transparent), transparent 70%),
+                linear-gradient(180deg, var(--card-2), var(--card));
+            border: 1px solid rgba(255, 255, 255, .10);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 18px;
+            transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, .18);
+            box-shadow: 0 16px 40px rgba(2, 6, 23, .45)
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: 3px;
+            border-radius: 12px 12px 0 0;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: .75;
+            pointer-events: none;
+        }
+
+        .card h2 {
+            margin: 0 0 4px;
+            font-size: 1.2rem
+        }
+
+        .muted {
+            color: var(--muted);
+            margin: 0 0 12px;
+            font-size: .95rem
+        }
+
+        .list {
+            display: grid;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: space-between;
+            flex-wrap: wrap
+        }
+
+        .btn-mini {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            padding: 8px 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, .14);
+            background: linear-gradient(180deg, var(--card-2), var(--card));
+            font-weight: 600;
+            font-size: .92rem;
+        }
+
+        .small {
+            font-size: .9rem;
+            color: var(--muted)
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            color: var(--muted);
             text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, .06)
         }
-        h2 {
-            margin-top: 40px;
-            color: #333;
+
+        /* Focus ring */
+        :focus-visible {
+            outline: 2px solid var(--ring);
+            outline-offset: 2px;
+            border-radius: 10px
         }
-        ul {
-            margin-top: 10px;
-            margin-left: 20px;
+
+        /* Align cards and add numbered steps */
+        .grid {
+            align-items: stretch;
         }
-        .credit {
-            margin-top: 60px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #666;
+
+        .card {
+            display: flex;
+            flex-direction: column;
         }
-        .love {
-            color: red;
+
+        /* Steps UI */
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            margin: 12px 0 0;
+            padding: 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: linear-gradient(180deg, var(--card-2), var(--card));
+        }
+
+        .step .num {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            font-size: .9rem;
+            background: var(--accent, #60a5fa);
+            color: #0b1020;
+            /* high contrast on both themes */
+            box-shadow: 0 0 0 6px color-mix(in oklab, var(--accent, #60a5fa) 20%, transparent);
+        }
+
+        .step .info {
+            min-width: 0
+        }
+
+        .step .label {
+            font-weight: 600
+        }
+
+        .step .hint {
+            color: var(--muted);
+            font-size: .9rem
+        }
+
+        .step .btn-mini {
+            white-space: nowrap
+        }
+
+        /* Mobile: button goes full width under the text, still aligned */
+        @media (max-width: 600px) {
+            .step {
+                grid-template-columns: auto 1fr
+            }
+
+            .step .btn-mini {
+                grid-column: 1 / -1;
+                width: 100%;
+                justify-content: center
+            }
         }
     </style>
 </head>
+
 <body>
+    <!-- inline SVG icons -->
+    <svg aria-hidden="true" width="0" height="0" style="position:absolute">
+        <symbol id="i-github" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.94c.58.11.79-.25.79-.56v-2.1c-3.2.7-3.87-1.39-3.87-1.39-.53-1.36-1.3-1.73-1.3-1.73-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.2-3.07-.12-.29-.52-1.46.12-3.05 0 0 .98-.31 3.2 1.18a11 11 0 0 1 5.82 0c2.22-1.49 3.2-1.18 3.2-1.18.65 1.59.25 2.76.12 3.05.75.8 1.2 1.82 1.2 3.07 0 4.41-2.69 5.39-5.24 5.67.42.36.8 1.07.8 2.16v3.2c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z" />
+        </symbol>
+        <symbol id="i-download" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M12 2a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42L11 12.6V3a1 1 0 0 1 1-1zm-7 16a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z" />
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm5 18a1.25 1.25 0 1 0 0-2.5A1.25 1.25 0 0 0 12 20zM6.5 5h11" />
+        </symbol>
+        <symbol id="i-tiles" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z" />
+        </symbol>
+        <symbol id="i-lib" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M4 3h14a2 2 0 0 1 2 2v13.5a1.5 1.5 0 0 1-1.5 1.5H8L4 22V5a2 2 0 0 1 2-2zm4 4h8v2H8V7zm0 4h8v2H8v-2z" />
+        </symbol>
+    </svg>
 
-    <h1>ImMobile 1.2.1</h1>
+    <header>
+        <div class="container nav">
+            <div class="title">
+                <svg class="i">
+                    <use href="#i-tiles" />
+                </svg>
+                ImMobile
+                <span class="ver">v1.2.1</span>
+            </div>
+            <a class="btn ghost" href="https://github.com/basharast/ImMobile" target="_blank" rel="noopener">
+                <svg class="i" aria-hidden="true">
+                    <use href="#i-github" />
+                </svg>
+                View on GitHub
+            </a>
+        </div>
+    </header>
 
-    <h2>Windows 10 Mobile</h2>
-    <ul>
-        <li><a href="https://github.com/basharast/ImMobile/raw/refs/heads/main/mobile/ImMobile_1.2.1_W10M.appx">ImMobile Package (Click Here)</a></li>
-    </ul>
+    <main class="container">
+        <section class="hero" aria-label="Intro">
+            <h1>Download ImMobile</h1>
+            <p>Universal shell built for performance and flexibility on legacy Windows devices. Choose your target OS
+                below.</p>
+        </section>
 
-    <h2>Windows Phone 8.1</h2>
-    <ul>
-        <li><a href="https://github.com/basharast/ImMobile/raw/refs/heads/main/mobile/Microsoft.VCLibs.ARM.8.1.appx">1- Microsoft.VCLibs (Dependencies)</a></li>
-        <li><a href="https://github.com/basharast/ImMobile/raw/refs/heads/main/mobile/ImMobile_1.2.1_WP8.1.appx">2- ImMobile Package</a></li>
-    </ul>
+        <section class="grid" aria-label="Downloads">
+            <!-- Windows 10 Mobile -->
+            <article class="card" style="--accent: var(--cyan)">
+                <h2><svg class="i">
+                        <use href="#i-phone" />
+                    </svg> Windows 10 Mobile</h2>
+                <p class="muted">Signed APPX package for Windows 10 Mobile.</p>
 
-    <div class="credit">
-        Developed with <span class="love">&hearts;</span> by <strong>Bashar Astifan</strong>
-    </div>
+                <ol class="steps">
+                    <li class="step">
+                        <span class="num">1</span>
+                        <div class="info">
+                            <div class="label">ImMobile Package</div>
+                            <div class="hint">Tap on device to install</div>
+                        </div>
+                        <a class="btn-mini"
+                            href="https://github.com/basharast/ImMobile/raw/refs/heads/main/mobile/ImMobile_1.2.1_W10M.appx">
+                            <svg class="i">
+                                <use href="#i-download" />
+                            </svg> Download .appx
+                        </a>
+                    </li>
+                </ol>
+            </article>
 
+            <!-- Windows Phone 8.1 -->
+            <article class="card" style="--accent: var(--amber)">
+                <h2><svg class="i">
+                        <use href="#i-tiles" />
+                    </svg> Windows Phone 8.1</h2>
+                <p class="muted">Install dependency first, then the app package.</p>
+
+                <ol class="steps">
+                    <li class="step">
+                        <span class="num">1</span>
+                        <div class="info">
+                            <div class="label">Microsoft.VCLibs (Dependency)</div>
+                            <div class="hint">Install before the app</div>
+                        </div>
+                        <a class="btn-mini"
+                            href="https://github.com/basharast/ImMobile/raw/refs/heads/main/mobile/Microsoft.VCLibs.ARM.8.1.appx">
+                            <svg class="i">
+                                <use href="#i-download" />
+                            </svg> Download .appx
+                        </a>
+                    </li>
+                    <li class="step">
+                        <span class="num">2</span>
+                        <div class="info">
+                            <div class="label">ImMobile Package</div>
+                            <div class="hint">Install after dependency</div>
+                        </div>
+                        <a class="btn-mini"
+                            href="https://github.com/basharast/ImMobile/raw/refs/heads/main/mobile/ImMobile_1.2.1_WP8.1.appx">
+                            <svg class="i">
+                                <use href="#i-download" />
+                            </svg> Download .appx
+                        </a>
+                    </li>
+                </ol>
+            </article>
+
+            <section aria-label="Help">
+                <details class="card" style="--accent: var(--emerald)">
+                    <summary><strong>Install help</strong> — enable sideloading, then tap the APPX on device</summary>
+                    <div class="muted" style="margin-top:8px">
+                        On-device: Settings → Developer → allow sideloading. Install dependencies first (if any), then
+                        the
+                        app package.
+                    </div>
+                </details>
+            </section>
+    </main>
+
+    <footer>
+        Developed with <span style="color:var(--rose)">♥</span> by <strong>Bashar Astifan</strong>
+    </footer>
 </body>
+
 </html>
