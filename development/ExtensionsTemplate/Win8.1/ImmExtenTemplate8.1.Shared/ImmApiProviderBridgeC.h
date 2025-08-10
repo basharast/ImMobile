@@ -1,9 +1,9 @@
 /*
-	Date: 2025-Present
+Date: 2025-Present
 
-	Bashar Astifan (https://github.com/basharast):
-	ImMobile Extension
-	Legacy support as tested on 10240
+Bashar Astifan (https://github.com/basharast):
+ImMobile Extension
+Legacy support as tested on 10240
 */
 
 #pragma once
@@ -23,6 +23,8 @@
 extern "C" {
 #endif
 #ifndef IMM_MAIN_INCLUDE
+	HANDLE CreateFileC(char* path, long accessMode, long shareMode, long openMode);
+
 	FILE* fopenImm(const char* filename, const char* mode);
 
 	size_t freadImm(void* ptr, size_t size, size_t count, FILE* stream);
@@ -79,6 +81,65 @@ extern "C" {
 
 	int fstatImm(const char* name, struct stat* out);
 
+	LPVOID VirtualAllocImm(LPVOID lpAddress, SIZE_T dwSize, DWORD flAllocationType, DWORD flProtect);
+
+	BOOL VirtualProtectImm(LPVOID lpAddress, SIZE_T dwSize, DWORD  flNewProtect, PDWORD lpflOldProtect);
+
+	HANDLE CreateFileMappingWImm(HANDLE hFile, LPSECURITY_ATTRIBUTES lpFileMappingAttributes, DWORD flProtect, DWORD dwMaximumSizeHigh, DWORD dwMaximumSizeLow, LPCWSTR lpName);
+
+	LPVOID MapViewOfFileExImm(HANDLE hFileMappingObject, DWORD dwDesiredAccess, DWORD dwFileOffsetHigh, DWORD dwFileOffsetLow, SIZE_T dwNumberOfBytesToMap, LPVOID lpBaseAddress);
+
+	BOOL UnmapViewOfFileImm(LPCVOID lpBaseAddress);
+
+	SIZE_T VirtualQueryImm(LPCVOID lpAddress, PMEMORY_BASIC_INFORMATION lpBuffer, SIZE_T dwLength);
+
+	BOOL FlushInstructionCacheImm(HANDLE  hProcess, LPCVOID lpBaseAddress, SIZE_T  dwSize);
+
+	HANDLE FindFirstFileAImm(LPCSTR lpFileName, LPWIN32_FIND_DATAA lpFindFileData);
+
+	HANDLE FindFirstFileWImm(LPCWSTR lpFileName, LPWIN32_FIND_DATAW lpFindFileData);
+
+	BOOL DeviceIoControlImm(HANDLE hDevice, DWORD dwIoControlCode, LPVOID lpInBuffer, DWORD nInBufferSize, LPVOID lpOutBuffer, DWORD nOutBufferSize, LPDWORD lpBytesReturned, LPOVERLAPPED lpOverlapped);
+
+	HANDLE CreateFileWImm(LPCWSTR lpFileName, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile);
+
+	HANDLE CreateEventWImm(LPSECURITY_ATTRIBUTES lpEventAttributes, BOOL bManualReset, BOOL bInitialState, LPCWSTR lpName);
+
+	BOOL CancelIoImm(HANDLE hFile);
+
+	BOOL GetOverlappedResultImm(HANDLE hFile, LPOVERLAPPED lpOverlapped, LPDWORD lpNumberOfBytesTransferred, BOOL bWait);
+
+	BOOL GetVolumePathNameWImm(LPCWSTR lpszFileName, LPWSTR lpszVolumePathName, DWORD cchBufferLength);
+
+	UINT GetDriveTypeWImm(LPCWSTR lpRootPathName);
+
+	BOOL GetDiskFreeSpaceWImm(LPCWSTR lpRootPathName, LPDWORD lpSectorsPerCluster, LPDWORD lpBytesPerSector, LPDWORD lpNumberOfFreeClusters, LPDWORD lpTotalNumberOfClusters);
+
+	BOOL SetFileTimeImm(HANDLE hFile, const FILETIME *lpCreationTime, const FILETIME *lpLastAccessTime, const FILETIME *lpLastWriteTime);
+
+	char *getenvImm(const char *varname);
+
+	BOOL VirtualFreeImm(LPVOID lpAddress, SIZE_T dwSize, DWORD  dwFreeType);
+
+	LPVOID VirtualAllocImm(LPVOID lpAddress, SIZE_T dwSize, DWORD  flAllocationType, DWORD  flProtect);
+
+	BOOL PeekNamedPipeImm(HANDLE  hNamedPipe, LPVOID  lpBuffer, DWORD   nBufferSize, LPDWORD lpBytesRead, LPDWORD lpTotalBytesAvail, LPDWORD lpBytesLeftThisMessage);
+
+	UINT GetACPImm();
+
+	DWORD GetTempPathWImm(DWORD  BufferLength, LPWSTR Buffer);
+
+	DWORD GetFullPathNameWImm(LPCWSTR lpFileName, DWORD nBufferLength, LPWSTR lpBuffer, LPWSTR *lpFilePart);
+
+	DWORD GetFileAttributesAImm(LPCSTR lpFileName);
+
+	DWORD GetFileTypeImm(HANDLE hFile);
+
+	BOOL GetExitCodeProcessImm(HANDLE hProcess, LPDWORD lpExitCode);
+
+	DWORD SetFilePointerImm(HANDLE hFile, LONG lDistanceToMove, PLONG lpDistanceToMoveHigh, DWORD dwMoveMethod);
+
+	DWORD GetCurrentDirectoryWImm(DWORD nBufferLength, LPTSTR lpBuffer);
 #endif 
 
 #ifdef __cplusplus

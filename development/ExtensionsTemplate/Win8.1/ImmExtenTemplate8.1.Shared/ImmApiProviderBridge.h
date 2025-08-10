@@ -1,9 +1,9 @@
 /*
-	Date: 2025-Present
+Date: 2025-Present
 
-	Bashar Astifan (https://github.com/basharast):
-	ImMobile Extension
-	Legacy support as tested on 10240
+Bashar Astifan (https://github.com/basharast):
+ImMobile Extension
+Legacy support as tested on 10240
 */
 
 #pragma once
@@ -31,7 +31,6 @@
 #include <new>
 #include <sstream>
 #include <filesystem>
-#include <wrl.h>
 #include <ppl.h>
 #include <ppltasks.h>
 #include <atomic>
@@ -49,6 +48,16 @@ namespace Imm {
 		void Notice(std::string text);
 
 		void Success(std::string text);
+	}
+
+	/* DLL */
+	namespace DLL {
+		HMODULE LoadLibrary(std::string filename);
+
+		FARPROC GetFromKernel(std::string process);
+
+		// Not Working
+		FARPROC GetFromUser(std::string process);
 	}
 
 	/* STORAGE */
@@ -200,11 +209,11 @@ namespace Imm {
 			int fseeki64(FILE* stream, __int64 offset, int origin);
 
 			int fgetc(FILE* stream);
-			
+
 			wint_t fgetwc(FILE* stream);
 
 			int ungetc(int character, FILE* stream);
-			
+
 			wint_t ungetwc(wint_t character, FILE* stream);
 
 			int fputc(int character, FILE* stream);
@@ -216,15 +225,15 @@ namespace Imm {
 			int fputws(const wchar_t* buffer, FILE* stream);
 
 			char* fgets(char* buffer, int maxCount, FILE* stream);
-			
+
 			wchar_t* fgetws(wchar_t* buffer, int maxCount, FILE* stream);
 
 			extern int(*fprintf)(FILE* stream, const char* format, ...);
-			
+
 			extern int(*fwprintf)(FILE* stream, const wchar_t* format, ...);
 
 			extern int(*fscanf)(FILE* stream, const char* format, ...);
-			
+
 			extern int(*fwscanf)(FILE* stream, const wchar_t* format, ...);
 
 			int fstat(const char* name, struct stat* out);

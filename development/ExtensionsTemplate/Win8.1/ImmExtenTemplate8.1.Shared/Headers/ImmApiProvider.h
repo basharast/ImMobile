@@ -286,6 +286,9 @@ __declspec(dllimport) void KeepInputPaneOpened(); // Use it on demand to keep to
 //__declspec(dllimport) NTSTATUS BCryptDestroyHashUWP(BCRYPT_HASH_HANDLE hHash);												 
 
 /* Those are Win32 helpful for older builds where they are missing, not special */
+#ifdef __cplusplus
+extern "C" {
+#endif
 __declspec(dllimport) HANDLE FindFirstFileAUWP(LPCSTR lpFileName, LPWIN32_FIND_DATAA lpFindFileData);
 __declspec(dllimport) HANDLE FindFirstFileWUWP(LPCWSTR lpFileName, LPWIN32_FIND_DATAW lpFindFileData);
 __declspec(dllimport) BOOL DeviceIoControlUWP(HANDLE hDevice, DWORD dwIoControlCode, LPVOID lpInBuffer, DWORD nInBufferSize, LPVOID lpOutBuffer, DWORD nOutBufferSize, LPDWORD lpBytesReturned, LPOVERLAPPED lpOverlapped);
@@ -309,6 +312,9 @@ __declspec(dllimport) DWORD GetFileTypeUWP(HANDLE hFile);
 __declspec(dllimport) BOOL GetExitCodeProcessUWP(HANDLE hProcess, LPDWORD lpExitCode);
 __declspec(dllimport) DWORD SetFilePointerUWP(HANDLE hFile, LONG lDistanceToMove, PLONG lpDistanceToMoveHigh, DWORD dwMoveMethod);
 __declspec(dllimport) DWORD GetCurrentDirectoryWUWP(DWORD nBufferLength, LPTSTR lpBuffer);
+#ifdef __cplusplus
+}
+#endif
 #pragma endregion
 
 #pragma region Types
@@ -3432,106 +3438,227 @@ namespace Imm {
 #ifdef __cplusplus
 extern "C" {
 #endif
-FILE* fopenImm(const char* filename, const char* mode) {
-	return Imm::Storage::Stream::fopen(filename, mode);
-}
+	FILE* fopenImm(const char* filename, const char* mode) {
+		return Imm::Storage::Stream::fopen(filename, mode);
+	}
 
-size_t freadImm(void* ptr, size_t size, size_t count, FILE* stream) {
-	return Imm::Storage::Stream::fread(ptr, size, count, stream);
-}
+	size_t freadImm(void* ptr, size_t size, size_t count, FILE* stream) {
+		return Imm::Storage::Stream::fread(ptr, size, count, stream);
+	}
 
-size_t fwriteImm(const void* ptr, size_t size, size_t count, FILE* stream) {
-	return Imm::Storage::Stream::fwrite(ptr, size, count, stream);
-}
+	size_t fwriteImm(const void* ptr, size_t size, size_t count, FILE* stream) {
+		return Imm::Storage::Stream::fwrite(ptr, size, count, stream);
+	}
 
-int fseekImm(FILE* stream, long offset, int origin) {
-	return Imm::Storage::Stream::fseek(stream, offset, origin);
-}
+	int fseekImm(FILE* stream, long offset, int origin) {
+		return Imm::Storage::Stream::fseek(stream, offset, origin);
+	}
 
-int fcloseImm(FILE* stream) {
-	return Imm::Storage::Stream::fclose(stream);
-}
+	int fcloseImm(FILE* stream) {
+		return Imm::Storage::Stream::fclose(stream);
+	}
 
-int ferrorImm(FILE* stream) {
-	return Imm::Storage::Stream::ferror(stream);
-}
+	int ferrorImm(FILE* stream) {
+		return Imm::Storage::Stream::ferror(stream);
+	}
 
-int feofImm(FILE* stream) {
-	return Imm::Storage::Stream::feof(stream);
-}
+	int feofImm(FILE* stream) {
+		return Imm::Storage::Stream::feof(stream);
+	}
 
-long ftellImm(FILE* stream) {
-	return Imm::Storage::Stream::ftell(stream);
-}
+	long ftellImm(FILE* stream) {
+		return Imm::Storage::Stream::ftell(stream);
+	}
 
-__int64 ftelli64Imm(FILE* stream) {
-	return Imm::Storage::Stream::ftelli64(stream);
-}
+	__int64 ftelli64Imm(FILE* stream) {
+		return Imm::Storage::Stream::ftelli64(stream);
+	}
 
-void rewindImm(FILE* stream) {
-	return Imm::Storage::Stream::rewind(stream);
-}
+	void rewindImm(FILE* stream) {
+		return Imm::Storage::Stream::rewind(stream);
+	}
 
-int fflushImm(FILE* stream) {
-	return Imm::Storage::Stream::fflush(stream);
-}
+	int fflushImm(FILE* stream) {
+		return Imm::Storage::Stream::fflush(stream);
+	}
 
-FILE* freopenImm(const char* filename, const char* mode, FILE* stream) {
-	return Imm::Storage::Stream::freopen(filename, mode, stream);
-}
+	FILE* freopenImm(const char* filename, const char* mode, FILE* stream) {
+		return Imm::Storage::Stream::freopen(filename, mode, stream);
+	}
 
-int fseeki64Imm(FILE* stream, __int64 offset, int origin) {
-	return Imm::Storage::Stream::fseeki64(stream, offset, origin);
-}
+	int fseeki64Imm(FILE* stream, __int64 offset, int origin) {
+		return Imm::Storage::Stream::fseeki64(stream, offset, origin);
+	}
 
-int fgetcImm(FILE* stream) {
-	return Imm::Storage::Stream::fgetc(stream);
-}
+	int fgetcImm(FILE* stream) {
+		return Imm::Storage::Stream::fgetc(stream);
+	}
 
-wint_t fgetwcImm(FILE* stream) {
-	return Imm::Storage::Stream::fgetwc(stream);
-}
+	wint_t fgetwcImm(FILE* stream) {
+		return Imm::Storage::Stream::fgetwc(stream);
+	}
 
-int ungetcImm(int character, FILE* stream) {
-	return Imm::Storage::Stream::ungetc(character, stream);
-}
+	int ungetcImm(int character, FILE* stream) {
+		return Imm::Storage::Stream::ungetc(character, stream);
+	}
 
-wint_t ungetwcImm(wint_t character, FILE* stream) {
-	return Imm::Storage::Stream::ungetwc(character, stream);
-}
+	wint_t ungetwcImm(wint_t character, FILE* stream) {
+		return Imm::Storage::Stream::ungetwc(character, stream);
+	}
 
-int fputcImm(int character, FILE* stream) {
-	return Imm::Storage::Stream::fputc(character, stream);
-}
+	int fputcImm(int character, FILE* stream) {
+		return Imm::Storage::Stream::fputc(character, stream);
+	}
 
-wint_t fputwcImm(wchar_t character, FILE* stream) {
-	return Imm::Storage::Stream::fputwc(character, stream);
-}
+	wint_t fputwcImm(wchar_t character, FILE* stream) {
+		return Imm::Storage::Stream::fputwc(character, stream);
+	}
 
-int fputsImm(const char* buffer, FILE* stream) {
-	return Imm::Storage::Stream::fputs(buffer, stream);
-}
+	int fputsImm(const char* buffer, FILE* stream) {
+		return Imm::Storage::Stream::fputs(buffer, stream);
+	}
 
-int fputwsImm(const wchar_t* buffer, FILE* stream) {
-	return Imm::Storage::Stream::fputws(buffer, stream);
-}
+	int fputwsImm(const wchar_t* buffer, FILE* stream) {
+		return Imm::Storage::Stream::fputws(buffer, stream);
+	}
 
-char* fgetsImm(char* buffer, int maxCount, FILE* stream) {
-	return Imm::Storage::Stream::fgets(buffer, maxCount, stream);
-}
+	char* fgetsImm(char* buffer, int maxCount, FILE* stream) {
+		return Imm::Storage::Stream::fgets(buffer, maxCount, stream);
+	}
 
-wchar_t* fgetwsImm(wchar_t* buffer, int maxCount, FILE* stream) {
-	return Imm::Storage::Stream::fgetws(buffer, maxCount, stream);
-}
+	wchar_t* fgetwsImm(wchar_t* buffer, int maxCount, FILE* stream) {
+		return Imm::Storage::Stream::fgetws(buffer, maxCount, stream);
+	}
 
-int(*fprintfImm)(FILE*, const char*, ...);
-int(*fwprintfImm)(FILE* stream, const wchar_t* format, ...);
-int(*fscanfImm)(FILE* stream, const char* format, ...);
-int(*fwscanfImm)(FILE* stream, const wchar_t* format, ...);
+	int(*fprintfImm)(FILE*, const char*, ...);
+	int(*fwprintfImm)(FILE* stream, const wchar_t* format, ...);
+	int(*fscanfImm)(FILE* stream, const char* format, ...);
+	int(*fwscanfImm)(FILE* stream, const wchar_t* format, ...);
 
-int fstatImm(const char* name, struct stat* out) {
-	return fstatUWP(name, out);
-}
+	int fstatImm(const char* name, struct stat* out) {
+		return fstatUWP(name, out);
+	}
+
+	HANDLE CreateFileC(char* path, long accessMode, long shareMode, long openMode) {
+		return Imm::Storage::Manage::CreateFile(path, accessMode, shareMode, openMode);
+	}
+
+	LPVOID VirtualAllocImm(LPVOID lpAddress, SIZE_T dwSize, DWORD flAllocationType, DWORD flProtect) {
+		return Imm::Memory::VirtualAlloc(lpAddress, dwSize, flAllocationType, flProtect);
+	}
+
+	BOOL VirtualProtectImm(LPVOID lpAddress, SIZE_T dwSize, DWORD  flNewProtect, PDWORD lpflOldProtect) {
+		return Imm::Memory::VirtualProtect(lpAddress, dwSize, flNewProtect, lpflOldProtect);
+	}
+
+	HANDLE CreateFileMappingWImm(HANDLE hFile, LPSECURITY_ATTRIBUTES lpFileMappingAttributes, DWORD flProtect, DWORD dwMaximumSizeHigh, DWORD dwMaximumSizeLow, LPCWSTR lpName) {
+		return Imm::Memory::CreateFileMappingW(hFile, lpFileMappingAttributes, flProtect, dwMaximumSizeHigh, dwMaximumSizeLow, lpName);
+	}
+
+	LPVOID MapViewOfFileExImm(HANDLE hFileMappingObject, DWORD dwDesiredAccess, DWORD dwFileOffsetHigh, DWORD dwFileOffsetLow, SIZE_T dwNumberOfBytesToMap, LPVOID lpBaseAddress) {
+		return Imm::Memory::MapViewOfFileEx(hFileMappingObject, dwDesiredAccess, dwFileOffsetHigh, dwFileOffsetLow, dwNumberOfBytesToMap, lpBaseAddress);
+	}
+
+	BOOL UnmapViewOfFileImm(LPCVOID lpBaseAddress) {
+		return Imm::Memory::UnmapViewOfFile(lpBaseAddress);
+	}
+
+	SIZE_T VirtualQueryImm(LPCVOID lpAddress, PMEMORY_BASIC_INFORMATION lpBuffer, SIZE_T dwLength) {
+		return Imm::Memory::VirtualQuery(lpAddress, lpBuffer, dwLength);
+	}
+
+	BOOL FlushInstructionCacheImm(HANDLE  hProcess, LPCVOID lpBaseAddress, SIZE_T  dwSize) {
+		return Imm::Memory::FlushInstructionCache(hProcess, lpBaseAddress, dwSize);
+	}
+
+	HANDLE FindFirstFileAImm(LPCSTR lpFileName, LPWIN32_FIND_DATAA lpFindFileData) {
+		return  FindFirstFileAUWP(lpFileName, lpFindFileData);
+	}
+
+	HANDLE FindFirstFileWImm(LPCWSTR lpFileName, LPWIN32_FIND_DATAW lpFindFileData) {
+		return FindFirstFileWUWP(lpFileName, lpFindFileData);
+	}
+
+	BOOL DeviceIoControlImm(HANDLE hDevice, DWORD dwIoControlCode, LPVOID lpInBuffer, DWORD nInBufferSize, LPVOID lpOutBuffer, DWORD nOutBufferSize, LPDWORD lpBytesReturned, LPOVERLAPPED lpOverlapped) {
+		return DeviceIoControlUWP(hDevice, dwIoControlCode, lpInBuffer, nInBufferSize, lpOutBuffer, nOutBufferSize, lpBytesReturned, lpOverlapped);
+	}
+
+	HANDLE CreateFileWImm(LPCWSTR lpFileName, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile) {
+		return CreateFileWUWP(lpFileName, dwDesiredAccess, dwShareMode, lpSecurityAttributes, dwCreationDisposition, dwFlagsAndAttributes, hTemplateFile);
+	}
+
+	HANDLE CreateEventWImm(LPSECURITY_ATTRIBUTES lpEventAttributes, BOOL bManualReset, BOOL bInitialState, LPCWSTR lpName) {
+		return CreateEventWUWP(lpEventAttributes, bManualReset, bInitialState, lpName);
+	}
+
+	BOOL CancelIoImm(HANDLE hFile) {
+		return CancelIoUWP(hFile);
+	}
+
+	BOOL GetOverlappedResultImm(HANDLE hFile, LPOVERLAPPED lpOverlapped, LPDWORD lpNumberOfBytesTransferred, BOOL bWait) {
+		return GetOverlappedResultUWP(hFile, lpOverlapped, lpNumberOfBytesTransferred, bWait);
+	}
+
+	BOOL GetVolumePathNameWImm(LPCWSTR lpszFileName, LPWSTR lpszVolumePathName, DWORD cchBufferLength) {
+		return GetVolumePathNameWUWP(lpszFileName, lpszVolumePathName, cchBufferLength);
+	}
+
+	UINT GetDriveTypeWImm(LPCWSTR lpRootPathName) {
+		return GetDriveTypeWUWP(lpRootPathName);
+	}
+
+	BOOL GetDiskFreeSpaceWImm(LPCWSTR lpRootPathName, LPDWORD lpSectorsPerCluster, LPDWORD lpBytesPerSector, LPDWORD lpNumberOfFreeClusters, LPDWORD lpTotalNumberOfClusters) {
+		return GetDiskFreeSpaceWUWP(lpRootPathName, lpSectorsPerCluster, lpBytesPerSector, lpNumberOfFreeClusters, lpTotalNumberOfClusters);
+	}
+
+	BOOL SetFileTimeImm(HANDLE hFile, const FILETIME *lpCreationTime, const FILETIME *lpLastAccessTime, const FILETIME *lpLastWriteTime) {
+		return SetFileTimeUWP(hFile, lpCreationTime, lpLastAccessTime, lpLastWriteTime);
+	}
+
+	char *getenvImm(const char *varname) {
+		return getenvUWP(varname);
+	}
+
+	BOOL VirtualFreeImm(LPVOID lpAddress, SIZE_T dwSize, DWORD  dwFreeType) {
+		return VirtualFreeUWP(lpAddress, dwSize, dwFreeType);
+	}
+
+	BOOL PeekNamedPipeImm(HANDLE  hNamedPipe, LPVOID  lpBuffer, DWORD   nBufferSize, LPDWORD lpBytesRead, LPDWORD lpTotalBytesAvail, LPDWORD lpBytesLeftThisMessage) {
+		return PeekNamedPipeUWP(hNamedPipe, lpBuffer, nBufferSize, lpBytesRead, lpTotalBytesAvail, lpBytesLeftThisMessage);
+	}
+
+	UINT GetACPImm() {
+		return GetACPUWP();
+	}
+
+	DWORD GetTempPathWImm(DWORD  BufferLength, LPWSTR Buffer) {
+		return GetTempPathWUWP(BufferLength, Buffer);
+	}
+
+	DWORD GetFullPathNameWImm(LPCWSTR lpFileName, DWORD nBufferLength, LPWSTR lpBuffer, LPWSTR *lpFilePart) {
+		return GetFullPathNameWUWP(lpFileName, nBufferLength, lpBuffer, lpFilePart);
+	}
+
+	DWORD GetFileAttributesAImm(LPCSTR lpFileName) {
+		return GetFileAttributesAUWP(lpFileName);
+	}
+
+	DWORD GetFileTypeImm(HANDLE hFile) {
+		return GetFileTypeUWP(hFile);
+	}
+
+	BOOL GetExitCodeProcessImm(HANDLE hProcess, LPDWORD lpExitCode) {
+		return GetExitCodeProcessUWP(hProcess, lpExitCode);
+	}
+
+	DWORD SetFilePointerImm(HANDLE hFile, LONG lDistanceToMove, PLONG lpDistanceToMoveHigh, DWORD dwMoveMethod) {
+		return SetFilePointerUWP(hFile, lDistanceToMove, lpDistanceToMoveHigh, dwMoveMethod);
+	}
+
+	DWORD GetCurrentDirectoryWImm(DWORD nBufferLength, LPTSTR lpBuffer) {
+		return GetCurrentDirectoryWUWP(nBufferLength, lpBuffer);
+	}
+
 #ifdef __cplusplus
 }
 #endif
