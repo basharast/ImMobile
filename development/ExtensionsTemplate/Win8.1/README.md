@@ -26,9 +26,9 @@ Tested on VS2015, however you can use higher if your project/port require that
 
 Use post command to copy the dll to extensions folder if ImMobile installed and it will run the app
 
-### Phone Emulator
+### Real Phone
 
-Use the following command in Post (Build Events) at `ImmExtenTemplate8.1.WindowsPhone` - Platform `Win32`
+Use the following command in Post (Build Events) at `ImmExtenTemplate8.1.WindowsPhone` - Platform `ARM`
 
 ```batch
 set "currentDirectory=$(ProjectDir)Deploy"
@@ -41,15 +41,15 @@ xcopy "$(TargetPath)" "%currentDirectory%\Local\extensions\" /Y /C /I
 
 echo Installing Extension (Mobile)...
 
-"%currentDirectory%\ISETool.exe" rs appxfolder:Local xd d9b836ab-fec8-402c-b9b8-80bb53f037b0 "%currentDirectory%\Local"
+"%currentDirectory%\ISETool.exe" rs appxfolder:Local de d9b836ab-fec8-402c-b9b8-80bb53f037b0 "%currentDirectory%\Local"
 
 if %errorlevel% neq 0 exit
 
-"%currentDirectory%\AppDeployCmd.exe" /launch d9b836ab-fec8-402c-b9b8-80bb53f037b0 /targetdevice:xd
+"%currentDirectory%\AppDeployCmd.exe" /launch d9b836ab-fec8-402c-b9b8-80bb53f037b0 /targetdevice:de
 ```
 
-### Real Phone
+### Phone Emulator
 
-Use the extact command above at `ImmExtenTemplate8.1.WindowsPhone` - Platform `ARM`
+Use the extact command above at `ImmExtenTemplate8.1.WindowsPhone` - Platform `Win32`
 
-just replace `xd` with `de`, you device must be connected and not locked
+just replace `de` with `xd`
