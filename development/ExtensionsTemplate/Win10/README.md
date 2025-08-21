@@ -40,7 +40,7 @@ both libraries only exists for ARM, but x64 or x86 may added on demand
 
 Tested on VS2017, however you can use higher if your project/port require that
 
-## Easy Testing
+## Easy Testing (Desktop)
 
 Use post command to copy the dll to extensions folder if ImMobile installed and it will run the app
 
@@ -51,3 +51,7 @@ if exist "%LOCALAPPDATA%\Packages\immobile-c789_eyr0bca9nc39y\LocalState\extensi
     start "" "imm:"
 )
 ```
+
+## Easy Testing (Mobile)
+
+TBC...

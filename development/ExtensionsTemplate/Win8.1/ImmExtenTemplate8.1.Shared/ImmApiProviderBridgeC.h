@@ -81,6 +81,10 @@ extern "C" {
 
 	int fstatImm(const char* name, struct stat* out);
 
+	int removeImm(const void* name);
+
+	int renameImm(char const* oldFileName, char const* newFileName);
+
 	LPVOID VirtualAllocImm(LPVOID lpAddress, SIZE_T dwSize, DWORD flAllocationType, DWORD flProtect);
 
 	BOOL VirtualProtectImm(LPVOID lpAddress, SIZE_T dwSize, DWORD  flNewProtect, PDWORD lpflOldProtect);

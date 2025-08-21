@@ -1505,6 +1505,14 @@ namespace Imm {
 			int fstat(const char* name, struct stat* out) {
 				return fstatUWP(name, out);
 			}
+
+			int remove(const void* name) {
+				return removeUWP(name);
+			}
+
+			int rename(char const* oldFileName, char const* newFileName) {
+				return renameUWP(oldFileName, newFileName);
+			}
 		}
 
 		/* PATH */
@@ -3537,6 +3545,14 @@ extern "C" {
 
 	int fstatImm(const char* name, struct stat* out) {
 		return fstatUWP(name, out);
+	}
+
+	int removeImm(const void* name) {
+		return removeUWP(name);
+	}
+
+	int renameImm(char const* oldFileName, char const* newFileName) {
+		return renameUWP(oldFileName, newFileName);
 	}
 
 	HANDLE CreateFileC(char* path, long accessMode, long shareMode, long openMode) {

@@ -237,6 +237,10 @@ namespace Imm {
 			extern int(*fwscanf)(FILE* stream, const wchar_t* format, ...);
 
 			int fstat(const char* name, struct stat* out);
+
+			int remove(const void* name);
+
+			int rename(char const* oldFileName, char const* newFileName);
 		}
 
 		/* PATH */
