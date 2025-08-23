@@ -55,6 +55,7 @@ Additionally, extensions can handle touch points as needed.
 <details>
  <summary>Showcase (Click Here)</summary>
   <br>
+  
 | ![Touch 1](https://github.com/user-attachments/assets/037afd98-4a13-4e2b-8ebe-22a22be2b300) | ![Touch 2](https://github.com/user-attachments/assets/8419e7af-9caa-4b25-857a-bbca01bf94ae) |
 | --- | --- |
   
