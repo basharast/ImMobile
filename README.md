@@ -75,12 +75,23 @@ They can reduce development effort by **up to 50% or more**, and they run as par
 
 Check out [ImmExtension Examples](https://github.com/basharast/ImMobile/tree/main/development/ExtensionsExamples)
 
+Extension can be developed without limits with rich API provided by ImMobile
+
+<details>
+ <summary>Showcase (Click Here)</summary>
+  <br>
+  
+| ![Extension](https://github.com/user-attachments/assets/8357b100-92b1-4a4e-9c14-7d838a6bedda) | ![0002](https://github.com/user-attachments/assets/c91f41cf-950c-4f85-afbf-a3c146efc900) | ![0001](https://github.com/user-attachments/assets/037591db-711f-499b-a3b3-b55c72b669ab) |
+| --- | --- | --- |
+  
+</details>
+
 ### Current Extensions
 
 - DOSBox
-- Lottie Player
-- Bing Wallpaper
-
+- [Libretro](https://github.com/basharast/ImLibretro)
+- [Lottie Player](https://github.com/basharast/ImMobile/tree/main/development/ExtensionsExamples/Win10/ImmLottie)
+- [Bing Wallpaper](https://github.com/basharast/ImMobile/tree/main/development/ExtensionsExamples/Win10/BingWallpapers)
 
 ## JSRuntime
 
