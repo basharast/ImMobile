@@ -117,6 +117,15 @@ it can determine the best way that can sideload the package.
 
 for Windows 10 UWP packages, the installer will auto install related local dependencies.
 
+<img width="720" alt="Packages" src="https://github.com/user-attachments/assets/2951f43b-d1f1-4acc-9384-4d73919b6ab7" />
+
+## Performance
+
+ImMobile designed to reduce resources consuming to the minimum 
+
+it can directly stop wasting resources if there are no interactions
+
+<img width="1275" height="522" alt="Idle" src="https://github.com/user-attachments/assets/1476a51c-4f90-48c3-81d3-844503248ec4" />
 
 ## Customizable
 
