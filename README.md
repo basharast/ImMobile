@@ -1,6 +1,6 @@
 <p align="center">
   <img src="assets/logo.png" width="176"><br>
-  <b>ImMobile Shell</b><br>
+  <b>ImMobile</b><br>
   <a href="https://github.com/basharast/ImMobile/wiki/Privacy">Privacy</a> |
   <a href="https://github.com/basharast/ImMobile/wiki">Wiki</a> |
   <a href="https://github.com/basharast/ImMobile/wiki/ImLab">Lab</a> |
