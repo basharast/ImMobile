@@ -115,7 +115,7 @@ ImMobile designed to reduce resources consuming to the minimum
 
 it can directly stop wasting resources if there are no interactions
 
-<img width="1275" height="522" alt="Idle" src="https://github.com/user-attachments/assets/1476a51c-4f90-48c3-81d3-844503248ec4" />
+<img width="1275" alt="Idle" src="https://github.com/user-attachments/assets/1476a51c-4f90-48c3-81d3-844503248ec4" />
 
 ## GitHub Browser
 
