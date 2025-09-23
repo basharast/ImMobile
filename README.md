@@ -227,6 +227,16 @@ but the idea can be adopted in universal means (multiple platforms), which need 
 
 Thanks to [LV](https://t.me/LV_LUXURY) for his efforts to test ImMobile and related extensions
 
+## Support
+
+Any donation is appreciated, even little once, 
+
+those the main source I use to renew my domain and keep using some paid subscribes that help in development 
+
+Thanks for the list below for support & donation
+
+- [Frederic Gette](https://github.com/fredericGette)
+
 ---
 
 ## Libraries Used
