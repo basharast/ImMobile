@@ -10,7 +10,7 @@
 
 # Overview
 
-ImMobile, a shell representing a truly universal environment designed to operate on the first Windows build and deliver a desktop-like experience, read how the project idea started [here](https://github.com/basharast/ImMobile/wiki/Story).
+ImMobile, a shell representing a truly universal environment designed to operate on the first Windows 8.1/10 builds and deliver a desktop-like experience, read how the project idea started [here](https://github.com/basharast/ImMobile/wiki/Story).
 
 This project is built upon **ImGui** and **C++**, focusing on performance and flexibility.
 
