@@ -13,6 +13,7 @@ imm.resetRuntime();
 /* JSRuntime Render */
 /********************/
 function render(visible) {
+	/* NOT IMPLEMENTED YET */
     // [BEGIN | DON'T REMOVE]
     if (imm.WindowBegin()) {
 

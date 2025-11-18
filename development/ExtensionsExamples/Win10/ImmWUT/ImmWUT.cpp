@@ -110,6 +110,8 @@ public:
 		// Helpful to integrate your extension with the UI as addons
 		// you can add as much as you want no limits
 
+		// Whether use FA icon, internal image or URL
+		// std::string internalIcon = Imm::Storage::Locations::InstallationFolder() + "\\Assets\\Icons\\Menus\\web-java.png";
 		Imm::App::Extension::RegisterAddonItem(name, ICON_FA_WRENCH, [&]() {
 			ToggleGUI();
 		});
