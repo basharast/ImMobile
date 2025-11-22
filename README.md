@@ -25,10 +25,10 @@ ImMobile supports:
 
 To give you a glimpse of its interface, here are some sample images:
 
-| ![1](https://github.com/user-attachments/assets/8666679a-db14-4ef2-a0c9-86753a650325) | ![2](https://github.com/user-attachments/assets/39670b39-e10d-4c4c-8dbb-1856c779e106) | ![7](https://github.com/user-attachments/assets/07423d30-ad5d-46f5-a0a3-5ac96717dc8d) |
+| ![1](https://github.com/user-attachments/assets/fcc370fc-131f-4988-981e-ce4352ece8a4) | ![2](https://github.com/user-attachments/assets/6f510d15-9f9f-4e02-9d63-e66d53d3f4dd) | ![3](https://github.com/user-attachments/assets/5b1c5069-7488-4190-8821-bf696f8ae139) |
 | --- | --- | --- |
-| ![3](https://github.com/user-attachments/assets/2012dba2-87d5-4001-b1d5-c4efe6e88a98) | ![4](https://github.com/user-attachments/assets/15cf67e3-4075-4e72-96e3-9d1dc3fc25fd) | ![6](https://github.com/user-attachments/assets/01eb340e-fac8-426e-81a6-b647ddd7b861) |
-| ![5](https://github.com/user-attachments/assets/f2d374bf-0ca3-440c-9d33-177a4b70ff75) | ![8](https://github.com/user-attachments/assets/f258e338-0918-43ee-b505-6a3f9429dbc5) | ![10](https://github.com/user-attachments/assets/11328b02-c442-4b54-9bea-e726a739b089) |
+| ![4](https://github.com/user-attachments/assets/7bceee0d-e6c6-4e29-8974-0e3d6dd5c070) | ![5](https://github.com/user-attachments/assets/223111a4-7cc9-43b1-b696-5e61a060ae90) | ![6](https://github.com/user-attachments/assets/fff3aa35-617d-482a-8dd6-0bf1c1c26136) |
+| ![7](https://github.com/user-attachments/assets/860d37f8-8b48-4f0a-a2d8-8813266ebe4d) | ![8](https://github.com/user-attachments/assets/792e8c91-b37b-4ede-a9ab-7d2c9c65d063) | ![9](https://github.com/user-attachments/assets/8f4f3e64-a763-4c11-ab88-e75cf49dbc7a) |
 
 ***
 
