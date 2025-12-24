@@ -225,7 +225,7 @@ but the idea can be adopted in universal means (multiple platforms), which need 
 
 ## Testing
 
-Thanks to `Louis Vuitton` for his efforts to test ImMobile and related extensions
+Thanks to [LV](https://t.me/LV_LUXURY) for his efforts to test ImMobile and related extensions
 
 ## Support
 
