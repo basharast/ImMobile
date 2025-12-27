@@ -93,6 +93,16 @@ Extension can be developed without limits with rich API provided by ImMobile
 - [Lottie Player](https://github.com/basharast/ImMobile/tree/main/development/ExtensionsExamples/Win10/ImmLottie)
 - [Bing Wallpaper](https://github.com/basharast/ImMobile/tree/main/development/ExtensionsExamples/Win10/BingWallpapers)
 
+Try [ImLibretro](https://github.com/basharast/ImLibretro) to see the advanced functions can extensions do
+
+<details>
+ <summary>ImLibretro Installation (Click Here)</summary>
+  <br>
+
+https://github.com/user-attachments/assets/9fa74bfc-3e2a-4d37-9e11-dd65a8a10b06
+
+</details>
+
 ## JSRuntime
 
 ImMobile provides advanced support for **extensions and add-ons**.  
