@@ -105,11 +105,9 @@ https://github.com/user-attachments/assets/9fa74bfc-3e2a-4d37-9e11-dd65a8a10b06
 
 ## JSRuntime
 
-ImMobile provides advanced support for **extensions and add-ons**.  
+ImMobile also features a **JavaScript runtime** that enables automation of advanced tasks using JS scripts.
+
 Check out the [Extensions Development](https://github.com/basharast/ImMobile/wiki/ImLab) section for more details.
-
-It also features a **JavaScript runtime** that enables automation of advanced tasks using JS scripts.
-
 
 ## Async Tasks
 
