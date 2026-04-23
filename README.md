@@ -67,6 +67,11 @@ ImMobile offers a desktop-like experience similar to Windows, featuring easy-to-
 
 These tools enhance the feeling of a **standalone environment**, reducing interruptions from pickers, popups, and notifications.
 
+## Desktop Bridge
+
+ImMobile Desktop Bridge extension allows you to run normal desktop apps inside ImMobile environment (with limitations)
+
+Read more about [Desktop Bridge here](https://github.com/basharast/ImMobile/wiki/Desktop-Bridge)
 
 ## ImMobile Extensions
 
