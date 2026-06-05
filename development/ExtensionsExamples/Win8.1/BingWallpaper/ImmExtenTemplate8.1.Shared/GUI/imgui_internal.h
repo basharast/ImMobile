@@ -188,7 +188,7 @@ typedef void(*ImGuiErrorLogCallback)(void* user_data, const char* fmt, ...);
 //-----------------------------------------------------------------------------
 
 #ifndef GImGui
-//extern IMGUI_API ImGuiContext* GImGui;  // Current implicit context pointer
+extern IMGUI_API ImGuiContext* GImGui;  // Current implicit context pointer
 #endif
 
 										//-------------------------------------------------------------------------
@@ -3018,7 +3018,7 @@ namespace ImGui
 	// Fonts, drawing
 	IMGUI_API void          SetCurrentFont(ImFont* font);
 	IMGUI_API ImFont* GetDefaultFont();
-	IMGUI_API ImDrawList* GetForegroundDrawList(ImGuiWindow* window); // This seemingly unnecessary wrapper simplifies compatibility between the 'master' and 'docking' branches.
+	inline ImDrawList* GetForegroundDrawList(ImGuiWindow* window) { IM_UNUSED(window); return GetForegroundDrawList(); } // This seemingly unnecessary wrapper simplifies compatibility between the 'master' and 'docking' branches.
 	IMGUI_API ImDrawList* GetBackgroundDrawList(ImGuiViewport* viewport);                     // get background draw list for the given viewport. this draw list will be the first rendering one. Useful to quickly draw shapes/text behind dear imgui contents.
 	IMGUI_API ImDrawList* GetForegroundDrawList(ImGuiViewport* viewport);                     // get foreground draw list for the given viewport. this draw list will be the last rendered one. Useful to quickly draw shapes/text over dear imgui contents.
 	IMGUI_API void          AddDrawListToDrawDataEx(ImDrawData* draw_data, ImVector<ImDrawList*>* out_list, ImDrawList* draw_list);
@@ -3267,7 +3267,7 @@ namespace ImGui
 	IMGUI_API void          PopFocusScope();
 	IMGUI_API ImGuiID          GetCurrentFocusScope();   // Focus scope we are outputting into, set by PushFocusScope()
 
-																												  // Drag and Drop
+														 // Drag and Drop
 	IMGUI_API bool          IsDragDropActive();
 	IMGUI_API bool          BeginDragDropTargetCustom(const ImRect& bb, ImGuiID id);
 	IMGUI_API void          ClearDragDrop();
@@ -3374,8 +3374,8 @@ namespace ImGui
 	// NB: All position are in absolute pixels coordinates (we are never using window coordinates internally)
 	IMGUI_API void          RenderText(ImVec2 pos, const char* text, const char* text_end = NULL, bool hide_text_after_hash = true);
 	IMGUI_API void          RenderTextWrapped(ImVec2 pos, const char* text, const char* text_end, float wrap_width);
-	IMGUI_API void          RenderTextClipped(const ImVec2& pos_min, const ImVec2& pos_max, const char* text, const char* text_end, const ImVec2* text_size_if_known, const ImVec2& align = ImVec2(0, 0), const ImRect* clip_rect = NULL);
-	IMGUI_API void          RenderTextClippedEx(ImDrawList* draw_list, const ImVec2& pos_min, const ImVec2& pos_max, const char* text, const char* text_end, const ImVec2* text_size_if_known, const ImVec2& align = ImVec2(0, 0), const ImRect* clip_rect = NULL);
+	IMGUI_API void          RenderTextClipped(const ImVec2& pos_min, const ImVec2& pos_max, const char* text, const char* text_end, const ImVec2* text_size_if_known, const ImVec2& align = ImVec2(0, 0), const ImRect* clip_rect = NULL, bool ignoreAppTranslation = false);
+	IMGUI_API void          RenderTextClippedEx(ImDrawList* draw_list, const ImVec2& pos_min, const ImVec2& pos_max, const char* text, const char* text_end, const ImVec2* text_size_if_known, const ImVec2& align = ImVec2(0, 0), const ImRect* clip_rect = NULL, bool ignoreAppTranslation = false);
 	IMGUI_API void          RenderTextEllipsis(ImDrawList* draw_list, const ImVec2& pos_min, const ImVec2& pos_max, float clip_max_x, float ellipsis_max_x, const char* text, const char* text_end, const ImVec2* text_size_if_known);
 	IMGUI_API void          RenderFrame(ImVec2 p_min, ImVec2 p_max, ImU32 fill_col, bool border = true, float rounding = 0.0f);
 	IMGUI_API void          RenderFrameBorder(ImVec2 p_min, ImVec2 p_max, float rounding = 0.0f);
@@ -3394,7 +3394,7 @@ namespace ImGui
 
 	// Widgets
 	IMGUI_API void          TextEx(const char* text, const char* text_end = NULL, ImGuiTextFlags flags = 0);
-	IMGUI_API bool          ButtonEx(const char* label, const ImVec2& size_arg = ImVec2(0, 0), ImGuiButtonFlags flags = 0);
+	IMGUI_API bool          ButtonEx(const char* label, const ImVec2& size_arg = ImVec2(0, 0), ImGuiButtonFlags flags = 0, bool ignoreAppTranslation = false);
 	IMGUI_API bool          ArrowButtonEx(const char* str_id, ImGuiDir dir, ImVec2 size_arg, ImGuiButtonFlags flags = 0);
 	IMGUI_API bool          ImageButtonEx(ImGuiID id, ImTextureID texture_id, const ImVec2& image_size, const ImVec2& uv0, const ImVec2& uv1, const ImVec4& bg_col, const ImVec4& tint_col, ImGuiButtonFlags flags = 0);
 	IMGUI_API void          SeparatorEx(ImGuiSeparatorFlags flags, float thickness = 1.0f);
@@ -3442,14 +3442,14 @@ namespace ImGui
 	IMGUI_API bool          DataTypeClamp(ImGuiDataType data_type, void* p_data, const void* p_min, const void* p_max);
 
 	// InputText
-	IMGUI_API bool          InputTextEx(const char* label, const char* hint, char* buf, int buf_size, const ImVec2& size_arg, ImGuiInputTextFlags flags, ImGuiInputTextCallback callback = NULL, void* user_data = NULL);
+	IMGUI_API bool          InputTextEx(const char* label, const char* hint, char* buf, int buf_size, const ImVec2& size_arg, ImGuiInputTextFlags flags, ImGuiInputTextCallback callback = NULL, void* user_data = NULL, bool ignoreAppTranslation = false);
 	IMGUI_API void          InputTextDeactivateHook(ImGuiID id);
 	IMGUI_API bool          TempInputText(const ImRect& bb, ImGuiID id, const char* label, char* buf, int buf_size, ImGuiInputTextFlags flags);
 	IMGUI_API bool          TempInputScalar(const ImRect& bb, ImGuiID id, const char* label, ImGuiDataType data_type, void* p_data, const char* format, const void* p_clamp_min = NULL, const void* p_clamp_max = NULL);
 	IMGUI_API bool             TempInputIsActive(ImGuiID id);
-	IMGUI_API ImGuiInputTextState* GetInputTextState(ImGuiID id); // Get input text state if active
+	IMGUI_API ImGuiInputTextState* GetInputTextState(ImGuiID id);// Get input text state if active
 
-																																									   // Color
+																 // Color
 	IMGUI_API void          ColorTooltip(const char* text, const float* col, ImGuiColorEditFlags flags);
 	IMGUI_API void          ColorEditOptionsPopup(const float* col, ImGuiColorEditFlags flags);
 	IMGUI_API void          ColorPickerOptionsPopup(const float* ref_col, ImGuiColorEditFlags flags);
@@ -3485,7 +3485,7 @@ namespace ImGui
 	IMGUI_API void          DebugBreakClearData();
 	IMGUI_API bool          DebugBreakButton(const char* label, const char* description_of_location);
 	IMGUI_API void          DebugBreakButtonTooltip(bool keyboard_only, const char* description_of_location);
-	IMGUI_API void             DebugStartItemPicker();
+	inline void             DebugStartItemPicker() { ImGuiContext& g = *GImGui; g.DebugItemPickerActive = true; }
 	IMGUI_API void          ShowFontAtlas(ImFontAtlas* atlas);
 	IMGUI_API void          DebugHookIdInfo(ImGuiID id, ImGuiDataType data_type, const void* data_id, const void* data_id_end);
 	IMGUI_API void          DebugNodeColumns(ImGuiOldColumns* columns);
