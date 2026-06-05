@@ -25,9 +25,9 @@ ImMobile supports:
 
 To give you a glimpse of its interface, here are some sample images:
 
-| ![1](https://github.com/user-attachments/assets/fcc370fc-131f-4988-981e-ce4352ece8a4) | ![2](https://github.com/user-attachments/assets/6f510d15-9f9f-4e02-9d63-e66d53d3f4dd) | ![3](https://github.com/user-attachments/assets/5b1c5069-7488-4190-8821-bf696f8ae139) |
+| ![1](https://github.com/user-attachments/assets/273d60ad-ffd3-4b4a-a5dd-49c3e94e2f60) | ![2](https://github.com/user-attachments/assets/4480c947-f620-42e1-84ac-c965629ae0e0) | ![3](https://github.com/user-attachments/assets/5b1c5069-7488-4190-8821-bf696f8ae139) |
 | --- | --- | --- |
-| ![4](https://github.com/user-attachments/assets/7bceee0d-e6c6-4e29-8974-0e3d6dd5c070) | ![5](https://github.com/user-attachments/assets/223111a4-7cc9-43b1-b696-5e61a060ae90) | ![6](https://github.com/user-attachments/assets/fff3aa35-617d-482a-8dd6-0bf1c1c26136) |
+| ![4](https://github.com/user-attachments/assets/7bceee0d-e6c6-4e29-8974-0e3d6dd5c070) | ![5](https://github.com/user-attachments/assets/1a325b76-8900-4dba-88b0-d262553c5782) | ![6](https://github.com/user-attachments/assets/fff3aa35-617d-482a-8dd6-0bf1c1c26136) |
 | ![7](https://github.com/user-attachments/assets/860d37f8-8b48-4f0a-a2d8-8813266ebe4d) | ![8](https://github.com/user-attachments/assets/792e8c91-b37b-4ede-a9ab-7d2c9c65d063) | ![9](https://github.com/user-attachments/assets/8f4f3e64-a763-4c11-ab88-e75cf49dbc7a) |
 
 ***
@@ -147,6 +147,11 @@ You can:
 - Bookmark custom collections
 - Download items (Login support)
 
+## MEGA.nz Browser
+
+- Browser built-in repos
+- Add you own repos
+- Queue downloads with auto actions
 
 ## Smart Installer
 
@@ -164,6 +169,16 @@ You can fully customize the UI, including font management.
 
 The **extensions API** also allows developers to override parts of the ImMobile UI as needed.
 
+## Multi Language
+
+ImMobile supports 30+ language
+
+| ![1](https://github.com/user-attachments/assets/b6fd4012-963b-4e4d-b277-22e3dd5a5e64) | ![2](https://github.com/user-attachments/assets/a0c512d5-5447-4cad-b794-338001394bde) | ![3](https://github.com/user-attachments/assets/76f21720-a995-4987-b50f-8fd954646047) |
+| --- | --- | --- |
+| ![4](https://github.com/user-attachments/assets/f438154f-56e0-46e2-97ff-bdd14356baa5) | ![5](https://github.com/user-attachments/assets/9d95feee-522b-4b11-a5a4-9af64361852d) | ![6](https://github.com/user-attachments/assets/32c6e785-6e7a-4ef9-9cc0-70d9faef82e5) |
+| ![7](https://github.com/user-attachments/assets/f8d3f04e-5d6b-4f95-8831-67093a3cb13d) | ![8](https://github.com/user-attachments/assets/3f208130-a566-4f8e-9b76-c363f21e3b49) | ![9](https://github.com/user-attachments/assets/fe3423d7-b92c-43ee-b0be-602c475fc848) |
+
+***
 
 ## Much More
 
