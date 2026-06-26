@@ -101,10 +101,12 @@ Extension can be developed without limits with rich API provided by ImMobile
 Try [ImLibretro](https://github.com/basharast/ImLibretro) to see the advanced functions can extensions do
 
 <details>
- <summary>ImLibretro Installation (Click Here)</summary>
+ <summary>Media Extension Showcase (Click Here)</summary>
   <br>
 
-https://github.com/user-attachments/assets/9fa74bfc-3e2a-4d37-9e11-dd65a8a10b06
+
+https://github.com/user-attachments/assets/f9e4b647-16c4-43b9-8492-e86a28f500bd
+
 
 </details>
 
